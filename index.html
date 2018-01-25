@@ -344,7 +344,6 @@
 <h3 id="3-Features"><a href="#3-Features" class="headerlink" title="3. Features"></a><strong>3. Features</strong></h3><ul>
 <li><strong>LIFO</strong> or last-in first-out order</li>
 </ul>
-<p><img src="https://koenig-media.raywenderlich.com/uploads/2015/11/AllBooksStack.png" alt="image1"></p>
 <h3 id="4-Implementation"><a href="#4-Implementation" class="headerlink" title="4. Implementation"></a><strong>4. Implementation</strong></h3><p><strong>4.1 Declare</strong> </p>
 <p>Declare with an array</p>
 <p><strong>4.2 Push</strong></p>
@@ -363,8 +362,8 @@
 <ul>
 <li>Peek avoids mutating the contents, hence the <strong>mutating</strong> keyword isn’t necessary in this case.</li>
 </ul>
-<h3 id="5-CustomStringConvertible"><a href="#5-CustomStringConvertible" class="headerlink" title="5. CustomStringConvertible"></a><strong>5. CustomStringConvertible</strong></h3><h3 id="6-Generics"><a href="#6-Generics" class="headerlink" title="6. Generics"></a><strong>6. Generics</strong></h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Stack</span>&lt;<span class="title">Element</span>&gt; </span>&#123;</span><br><span class="line">    <span class="keyword">fileprivate</span> <span class="keyword">var</span> array: [<span class="type">Element</span>] = []</span><br><span class="line"></span><br><span class="line">    <span class="keyword">mutating</span> <span class="function"><span class="keyword">func</span> <span class="title">push</span><span class="params">(<span class="number">_</span> element: Element)</span></span>&#123;</span><br><span class="line">        array.append(element)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">mutating</span> <span class="function"><span class="keyword">func</span> <span class="title">pop</span><span class="params">()</span></span>-&gt;<span class="type">Element</span>?&#123;</span><br><span class="line">        <span class="keyword">return</span> array.popLast()</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">func</span> <span class="title">peek</span><span class="params">()</span></span>-&gt;<span class="type">Element</span>?&#123;</span><br><span class="line">        <span class="keyword">return</span> array.last</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">extension</span> <span class="title">Stack</span>: <span class="title">CustomStringConvertible</span></span>&#123;</span><br><span class="line">    <span class="keyword">var</span> description: <span class="type">String</span>&#123;</span><br><span class="line">        <span class="keyword">let</span> topDivider = <span class="string">"---Stack---\n"</span></span><br><span class="line">        <span class="keyword">let</span> stackElements = array.<span class="built_in">map</span>&#123;<span class="string">"<span class="subst">\($<span class="number">0</span>)</span>"</span>&#125;.reversed().joined(separator: <span class="string">"\n"</span>)</span><br><span class="line">        <span class="keyword">let</span> bottomDivider = <span class="string">"\n----------\n"</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> topDivider + stackElements + bottomDivider</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// test</span></span><br><span class="line"><span class="keyword">var</span> rwBookStack = <span class="type">Stack</span>&lt;<span class="type">String</span>&gt;()</span><br><span class="line">rwBookStack.push(<span class="string">"3D Games by Tutorials"</span>)</span><br><span class="line">rwBookStack.push(<span class="string">"tvOS Apprentice"</span>)</span><br><span class="line">rwBookStack.push(<span class="string">"iOS Apprentice"</span>)</span><br><span class="line">rwBookStack.push(<span class="string">"Swift Apprentice"</span>)</span><br><span class="line"><span class="built_in">print</span>(rwBookStack)</span><br></pre></td></tr></table></figure>
-<h3 id="8-Others"><a href="#8-Others" class="headerlink" title="8. Others"></a><strong>8. Others</strong></h3><ul>
+<h3 id="5-CustomStringConvertible"><a href="#5-CustomStringConvertible" class="headerlink" title="5. CustomStringConvertible"></a><strong>5. CustomStringConvertible</strong></h3><h3 id="6-Generics"><a href="#6-Generics" class="headerlink" title="6. Generics"></a><strong>6. Generics</strong></h3><figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Stack</span>&lt;<span class="title">Element</span>&gt; </span>&#123;</span><br><span class="line">    <span class="keyword">fileprivate</span> <span class="keyword">var</span> array: [<span class="type">Element</span>] = []</span><br><span class="line"></span><br><span class="line">    <span class="keyword">mutating</span> <span class="function"><span class="keyword">func</span> <span class="title">push</span><span class="params">(<span class="number">_</span> element: Element)</span></span>&#123;</span><br><span class="line">        array.append(element)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">mutating</span> <span class="function"><span class="keyword">func</span> <span class="title">pop</span><span class="params">()</span></span>-&gt;<span class="type">Element</span>?&#123;</span><br><span class="line">        <span class="keyword">return</span> array.popLast()</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">func</span> <span class="title">peek</span><span class="params">()</span></span>-&gt;<span class="type">Element</span>?&#123;</span><br><span class="line">        <span class="keyword">return</span> array.last</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">extension</span> <span class="title">Stack</span>: <span class="title">CustomStringConvertible</span></span>&#123;</span><br><span class="line">    <span class="keyword">var</span> description: <span class="type">String</span>&#123;</span><br><span class="line">        <span class="keyword">let</span> topDivider = <span class="string">"---Stack---\n"</span></span><br><span class="line">        <span class="keyword">let</span> stackElements = array.<span class="built_in">map</span>&#123;<span class="string">"<span class="subst">\($<span class="number">0</span>)</span>"</span>&#125;.reversed().joined(separator: <span class="string">"\n"</span>)</span><br><span class="line">        <span class="keyword">let</span> bottomDivider = <span class="string">"\n----------\n"</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> topDivider + stackElements + bottomDivider</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// test</span></span><br><span class="line"><span class="keyword">var</span> rwBookStack = <span class="type">Stack</span>&lt;<span class="type">String</span>&gt;()</span><br><span class="line">rwBookStack.push(<span class="string">"3D Games by Tutorials"</span>)</span><br><span class="line">rwBookStack.push(<span class="string">"tvOS Apprentice"</span>)</span><br><span class="line">rwBookStack.push(<span class="string">"iOS Apprentice"</span>)</span><br><span class="line">rwBookStack.push(<span class="string">"Swift Apprentice"</span>)</span><br><span class="line"><span class="built_in">print</span>(rwBookStack)</span><br></pre></td></tr></table></figure>
+<h3 id="7-Others"><a href="#7-Others" class="headerlink" title="7. Others"></a><strong>7. Others</strong></h3><ul>
 <li>There are two properties that often come with the stack: <strong>isEmpty</strong> and <strong>count</strong></li>
 </ul>
 <figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> isEmpty: <span class="type">Bool</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> array.isEmpty</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> <span class="built_in">count</span>: <span class="type">Int</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> array.<span class="built_in">count</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -2799,134 +2798,6 @@ func test_StartDownload_Performance() {
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/25/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Xin Jie">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="XinJie's Notes">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/11/25/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-25T13:54:50+08:00">
-                2017-11-25
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2973,7 +2844,7 @@ func test_StartDownload_Performance() {
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -2986,7 +2857,7 @@ func test_StartDownload_Performance() {
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
