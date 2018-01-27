@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Test," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="Source iOS Unit Testing and UI Testing Tutorial Make better apps by using iOS Unit Testing! Writing tests isn’t glamorous, but since tests can keep your sparkli">
+<meta name="keywords" content="Test">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS Unit Testing and UI Testing Tutorial">
+<meta property="og:url" content="http://yoursite.com/2017/12/16/Unit Test/iOS Unit Testing and UI Testing Tutorial/index.html">
+<meta property="og:site_name" content="XinJie&#39;s Notes">
+<meta property="og:description" content="Source iOS Unit Testing and UI Testing Tutorial Make better apps by using iOS Unit Testing! Writing tests isn’t glamorous, but since tests can keep your sparkling app from turning into a bug-ridden pi">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://koenig-media.raywenderlich.com/uploads/2017/01/TestinginXcode-feature-250x250.png">
+<meta property="og:image" content="https://koenig-media.raywenderlich.com/uploads/2016/12/TestNavigator1.png">
+<meta property="og:image" content="https://koenig-media.raywenderlich.com/uploads/2016/12/TestNavigator2-650x290.png">
+<meta property="og:image" content="https://koenig-media.raywenderlich.com/uploads/2016/12/TestNavigator3-480x81.png">
+<meta property="og:image" content="https://koenig-media.raywenderlich.com/uploads/2016/12/TestNavigator4-650x341.png">
+<meta property="og:image" content="https://koenig-media.raywenderlich.com/uploads/2016/12/givenWhenThen-433x320.png">
+<meta property="og:image" content="https://koenig-media.raywenderlich.com/uploads/2016/12/AddTestFailureBreakpoint.png">
+<meta property="og:image" content="https://koenig-media.raywenderlich.com/uploads/2016/12/TestFailure-650x353.png">
+<meta property="og:image" content="https://koenig-media.raywenderlich.com/uploads/2016/12/DebugConsole.png">
+<meta property="og:image" content="https://koenig-media.raywenderlich.com/uploads/2016/12/fake-433x320.png">
+<meta property="og:image" content="https://koenig-media.raywenderlich.com/uploads/2016/12/UITest.png">
+<meta property="og:image" content="https://koenig-media.raywenderlich.com/uploads/2016/12/PerformanceResult-650x228.png">
+<meta property="og:image" content="https://koenig-media.raywenderlich.com/uploads/2016/12/CodeCoverageSwitch.png">
+<meta property="og:image" content="https://koenig-media.raywenderlich.com/uploads/2016/12/CoverageReport1-650x189.png">
+<meta property="og:image" content="https://koenig-media.raywenderlich.com/uploads/2016/12/CoverageReport2-650x252.png">
+<meta property="og:image" content="https://koenig-media.raywenderlich.com/uploads/2016/12/CoverageReport4-650x436.png">
+<meta property="og:updated_time" content="2018-01-25T14:45:57.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="iOS Unit Testing and UI Testing Tutorial">
+<meta name="twitter:description" content="Source iOS Unit Testing and UI Testing Tutorial Make better apps by using iOS Unit Testing! Writing tests isn’t glamorous, but since tests can keep your sparkling app from turning into a bug-ridden pi">
+<meta name="twitter:image" content="https://koenig-media.raywenderlich.com/uploads/2017/01/TestinginXcode-feature-250x250.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/12/16/Unit Test/iOS Unit Testing and UI Testing Tutorial/"/>
+
+
+
+
+
+  <title>iOS Unit Testing and UI Testing Tutorial | XinJie's Notes</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">XinJie's Notes</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">life is too short to play it safe</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/16/Unit Test/iOS Unit Testing and UI Testing Tutorial/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Xin Jie">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="XinJie's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">iOS Unit Testing and UI Testing Tutorial</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-16T18:24:00+08:00">
+                2017-12-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><a href="https://www.raywenderlich.com/150073/ios-unit-testing-and-ui-testing-tutorial" title="Permalink to iOS Unit Testing and UI Testing Tutorial" target="_blank" rel="noopener">Source</a></p>
+<h1 id="iOS-Unit-Testing-and-UI-Testing-Tutorial"><a href="#iOS-Unit-Testing-and-UI-Testing-Tutorial" class="headerlink" title="iOS Unit Testing and UI Testing Tutorial"></a>iOS Unit Testing and UI Testing Tutorial</h1><p><img src="https://koenig-media.raywenderlich.com/uploads/2017/01/TestinginXcode-feature-250x250.png" alt="iOS Unit Testing - feature"></p>
+<p>Make better apps by using iOS Unit Testing!</p>
+<p>Writing tests isn’t glamorous, but since tests can keep your sparkling app from turning into a bug-ridden piece of junk, it sure is necessary. If you’re reading this iOS Unit Testing and UI Testing tutorial, you already know you <em>should</em> write tests for your code and UI, but you’re not sure how to test in Xcode. </p>
+<p>Maybe you already have a “working” app but no tests set up for it, and you want to be able to test any changes when you extend the app. Maybe you have some tests written, but aren’t sure whether they’re the <em>right</em> tests. Or maybe you’re working on your app now and want to test as you go. </p>
+<p>This iOS Unit Testing and UI Testing tutorial shows how to use Xcode’s test navigator to test an app’s model and asynchronous methods, how to fake interactions with library or system objects by using stubs and mocks, how to test UI and performance, and how to use the code coverage tool. Along the way, you’ll pick up some of the vocabulary used by testing ninjas, and by the end of this tutorial you’ll be injecting dependencies into your <em>System Under Test</em> (SUT) with aplomb!</p>
+<h2 id="Testing-Testing-…"><a href="#Testing-Testing-…" class="headerlink" title="Testing, Testing …"></a>Testing, Testing …</h2><h3 id="What-to-Test"><a href="#What-to-Test" class="headerlink" title="What to Test?"></a>What to Test?</h3><p>Before writing any tests, it’s important to start with the basics: what do you need to test? If your goal is to extend an existing app, you should first write tests for <em>any component you plan to change</em>.</p>
+<p>More generally, tests should cover:</p>
+<ul>
+<li>Core functionality: model classes and methods, and their interactions with the controller</li>
+<li>The most common UI workflows</li>
+<li>Boundary conditions</li>
+<li>Bug fixes</li>
+</ul>
+<h3 id="First-Things-FIRST-Best-Practices-for-Testing"><a href="#First-Things-FIRST-Best-Practices-for-Testing" class="headerlink" title="First Things FIRST: Best Practices for Testing"></a>First Things FIRST: Best Practices for Testing</h3><p>The acronym FIRST describes a concise set of criteria for effective unit tests. Those criteria are:</p>
+<ul>
+<li><em>Fast</em>: Tests should run quickly, so people won’t mind running them.</li>
+<li><em>Independent/Isolated</em>: Tests should not do setup or teardown for one another.</li>
+<li><em>Repeatable</em>: You should obtain the same results every time you run a test. External data providers and concurrency issues could cause intermittent failures.</li>
+<li><em>Self-validating</em>: Tests should be fully automated; the output should be either “pass” or “fail”, rather than a programmer’s interpretation of a log file.</li>
+<li><em>Timely</em>: Ideally, tests should be written just before you write the production code they test.</li>
+</ul>
+<p>Following the FIRST principles will keep your tests clear and helpful, instead of turning into roadblocks for your app.</p>
+<h2 id="Getting-Started"><a href="#Getting-Started" class="headerlink" title="Getting Started"></a>Getting Started</h2><p>Download, unzip, open and inspect the <a href="https://koenig-media.raywenderlich.com/uploads/2016/12/Starters.zip" target="_blank" rel="noopener">starter projects</a> BullsEye and HalfTunes.</p>
+<p><em>BullsEye</em> is based on a sample app in <a href="https://www.raywenderlich.com/store/ios-apprentice" target="_blank" rel="noopener"><em>iOS Apprentice</em></a>; I’ve extracted the game logic into a <code>BullsEyeGame</code> class and added an alternative game style. </p>
+<p>In the lower-right corner there’s a segmented control to let the user select the game style: either <em>Slide</em>, to move the slider to get as close as possible to the target value, or <em>Type</em>, to guess where the slider position is. The control’s action also stores the user’s game style choice as a user default.</p>
+<p><em>HalfTunes</em> is the sample app from our <a href="https://www.raywenderlich.com/110458/nsurlsession-tutorial-getting-started" target="_blank" rel="noopener">NSURLSession Tutorial</a>, updated to Swift 3. Users can query the iTunes API for songs, then download and play song snippets.</p>
+<p>Let’s start testing!</p>
+<h2 id="Unit-Testing-in-Xcode"><a href="#Unit-Testing-in-Xcode" class="headerlink" title="Unit Testing in Xcode"></a>Unit Testing in Xcode</h2><h3 id="Creating-a-Unit-Test-Target"><a href="#Creating-a-Unit-Test-Target" class="headerlink" title="Creating a Unit Test Target"></a>Creating a Unit Test Target</h3><p>The <em>Xcode Test Navigator</em> provides the easiest way to work with tests; you’ll use it to create test targets and run tests on your app.</p>
+<p>Open the <em>BullsEye</em> project and hit <em>Command-5</em> to open its test navigator.</p>
+<p>Click the <em>+</em> button in the lower-left corner, then select <em>New Unit Test Target…</em> from the menu:</p>
+<p><img src="https://koenig-media.raywenderlich.com/uploads/2016/12/TestNavigator1.png" alt="iOS Unit Testing: Test Navigator"></p>
+<p>Accept the default name <em>BullsEyeTests</em>. When the <em>test bundle</em> appears in the test navigator, click it to open it in the editor. If BullsEyeTests doesn’t appear automatically, trouble-shoot by clicking one of the other navigators, then returning to the test navigator.</p>
+<p><img src="https://koenig-media.raywenderlich.com/uploads/2016/12/TestNavigator2-650x290.png" alt="iOS Unit Testing: Template"></p>
+<p>The template imports <code>XCTest</code> and defines a <code>BullsEyeTests</code> subclass of <code>XCTestCase</code>, with <code>setup()</code>, <code>tearDown()</code> and example test methods.</p>
+<p>There are three ways to run the test class:</p>
+<ol>
+<li><em>ProductTest</em> or <em>Command-U</em>. This actually runs <em>all</em> test classes.</li>
+<li>Click the arrow button in the test navigator.</li>
+<li>Click the diamond button in the gutter.</li>
+</ol>
+<p><img src="https://koenig-media.raywenderlich.com/uploads/2016/12/TestNavigator3-480x81.png" alt="iOS Unit Testing: Running Tests"></p>
+<p>You can also run an individual test method by clicking its diamond, either in the test navigator or in the gutter.</p>
+<p>Try the different ways to run the tests to get a feeling for how long it takes and what it looks like. The sample tests don’t do anything yet, so they’ll run really fast! </p>
+<p>When all the tests succeed, the diamonds will turn green and show check marks. Click the gray diamond at the end of <code>testPerformanceExample()</code> to open the Performance Result:</p>
+<p><img src="https://koenig-media.raywenderlich.com/uploads/2016/12/TestNavigator4-650x341.png" alt="iOS Unit Testing: Performance Results"></p>
+<p>You don’t need <code>testPerformanceExample()</code>, so delete it.</p>
+<h3 id="Using-XCTAssert-to-Test-Models"><a href="#Using-XCTAssert-to-Test-Models" class="headerlink" title="Using XCTAssert to Test Models"></a>Using XCTAssert to Test Models</h3><p>First, you’ll use XCTAssert to test a core function of BullsEye’s model: does a <code>BullsEyeGame</code> object correctly calculate the score for a round?</p>
+<p>In <em>BullsEyeTests.swift</em>, add this line just below the <code>import</code> statement:</p>
+<pre><code>@testable import BullsEye
+</code></pre><p>This gives the unit tests access to the classes and methods in BullsEye.</p>
+<p>At the top of the <code>BullsEyeTests</code> class, add this property:</p>
+<pre><code>var gameUnderTest: BullsEyeGame!
+</code></pre><p>Create and start a new <code>BullsEyeGame</code> object in <code>setup()</code>, <em>after</em> the call to <code>super</code>:</p>
+<pre><code>gameUnderTest = BullsEyeGame()
+gameUnderTest.startNewGame()
+</code></pre><p>This creates an SUT (System Under Test) object at the class level, so all the tests in this test class can access the SUT object’s properties and methods.</p>
+<p>Here, you also call the game’s <code>startNewGame</code> method, which creates a <code>targetValue</code>. Many of your tests will use <code>targetValue</code>, to test that the game calculates the score correctly.</p>
+<p>Before you forget, <em>release</em> your SUT object in <code>tearDown()</code>, <em>before</em> the call to <code>super</code>:</p>
+<pre><code>gameUnderTest = nil
+</code></pre><p><em>Note:</em> It’s good practice to create the SUT in <code>setup()</code> and release it in <code>tearDown()</code>, to ensure every test starts with a clean slate. For more discussion, check out <a href="http://qualitycoding.org/teardown/" target="_blank" rel="noopener">Jon Reid’s post</a> on the subject.</p>
+<p>Now you’re ready to write your first test! </p>
+<p>Replace <code>testExample()</code> with the following code:</p>
+<pre><code>// XCTAssert to test model
+func testScoreIsComputed() {
+  // 1. given
+  let guess = gameUnderTest.targetValue + 5
+
+  // 2. when
+  _ = gameUnderTest.check(guess: guess)
+
+  // 3. then
+  XCTAssertEqual(gameUnderTest.scoreRound, 95, &quot;Score computed from guess is wrong&quot;)
+}
+</code></pre><p>A test method’s name always begins with <code>test</code>, followed by a description of what it tests.</p>
+<p>It’s good practice to format the test into <em>given</em>, <em>when</em> and <em>then</em> sections:</p>
+<ol>
+<li>In the <em>given</em> section, set up any values needed: in this example, you create a <code>guess</code> value so you can specify how much it differs from <code>targetValue</code>.</li>
+<li>In the <em>when</em> section, execute the code being tested: call <code>gameUnderTest.check(_:)</code>.</li>
+<li>In the <em>then</em> section, assert the result you expect (in this case, <code>gameUnderTest.scoreRound</code> is 100 – 5) with a message that prints if the test <em>fails</em>.</li>
+</ol>
+<p>Run the test by clicking the diamond icon in the gutter or in the test navigator. The app will build and run, and the diamond icon will change to a green checkmark!</p>
+<p><img src="https://koenig-media.raywenderlich.com/uploads/2016/12/givenWhenThen-433x320.png" alt="iOS Unit Testing givenWhenThen"></p>
+<p><em>Note:</em> The <em>Given-When-Then</em> structure of a test originated with Behavior Driven Development (BDD) as a client-friendly, low-jargon nomenclature. Alternative naming systems are <em>Arrange-Act-Assert</em> and <em>Assemble-Activate-Assert</em>.</p>
+<h3 id="Debugging-a-Test"><a href="#Debugging-a-Test" class="headerlink" title="Debugging a Test"></a>Debugging a Test</h3><p>There’s a bug built into <code>BullsEyeGame</code> on purpose, so now you’ll practice finding it. To see the bug in action, rename <code>testScoreIsComputed</code> to <code>testScoreIsComputedWhenGuessGTTarget</code>, then copy-paste-edit it to create <code>testScoreIsComputedWhenGuessLTTarget</code>.</p>
+<p>In this test, <em>subtract</em> 5 from <code>targetValue</code> in the <em>given</em> section. Leave everything else the same:</p>
+<pre><code>func testScoreIsComputedWhenGuessLTTarget() {
+  // 1. given
+  let guess = gameUnderTest.targetValue - 5
+
+  // 2. when
+  _ = gameUnderTest.check(guess: guess)
+
+  // 3. then
+  XCTAssertEqual(gameUnderTest.scoreRound, 95, &quot;Score computed from guess is wrong&quot;)
+}
+</code></pre><p>The difference between <code>guess</code> and <code>targetValue</code> is still 5, so the score should still be 95.</p>
+<p>In the breakpoint navigator, add a <em>Test Failure Breakpoint</em>; this will stop the test run when a test method posts a failure assertion.</p>
+<p><img src="https://koenig-media.raywenderlich.com/uploads/2016/12/AddTestFailureBreakpoint.png" alt="iOS Unit Testing: Adding a Test Failure Breakpoint"></p>
+<p>Run your test: it should stop at the <code>XCTAssertEqual</code> line with a Test Failure. </p>
+<p>Inspect <code>gameUnderTest</code> and <code>guess</code> in the debug console:</p>
+<p><img src="https://koenig-media.raywenderlich.com/uploads/2016/12/TestFailure-650x353.png" alt="iOS Unit Testing: Viewing a Test Failure"></p>
+<p><code>guess</code> is <code>targetValue - 5</code> but <code>scoreRound</code> is 105, not 95!</p>
+<p>To investigate further, use the normal debugging process: set a breakpoint at the <em>when</em> statement and also one in <em>BullsEyeGame.swift</em>, in <code>check(_:)</code>, where it creates <code>difference</code>. Then run the test again, and step-over the <code>let difference</code> statement to inspect the value of <code>difference</code> in the app:</p>
+<p><img src="https://koenig-media.raywenderlich.com/uploads/2016/12/DebugConsole.png" alt="iOS Unit Testing: Debug Console"></p>
+<p>The problem is that <code>difference</code> is negative, so the score is <em>100 – (-5)</em>; the fix is to use the <em>absolute value</em> of difference. In <code>check(_:)</code>, uncomment the correct line and delete the incorrect one.</p>
+<p>Remove the two breakpoints and run the test again to confirm that it now succeeds.</p>
+<h3 id="Using-XCTestExpectation-to-Test-Asynchronous-Operations"><a href="#Using-XCTestExpectation-to-Test-Asynchronous-Operations" class="headerlink" title="Using XCTestExpectation to Test Asynchronous Operations"></a>Using XCTestExpectation to Test Asynchronous Operations</h3><p>Now that you’ve learned how to test models and debug test failures, let’s move on to using <code>XCTestExpectation</code> to test network operations.</p>
+<p>Open the <em>HalfTunes</em> project: it uses <code>URLSession</code> to query the iTunes API and download song samples. Suppose you want to modify it to use <a href="https://www.raywenderlich.com/121540/alamofire-tutorial-getting-started" target="_blank" rel="noopener">AlamoFire</a> for network operations. To see if anything breaks, you should write tests for the network operations and run them before and after you change the code.</p>
+<p><code>URLSession</code> methods are <em>asynchronous</em>: they return right away, but don’t really finish running until some time later. To test asynchronous methods, you use <code>XCTestExpectation</code> to make your test wait for the asynchronous operation to complete.</p>
+<p>Asynchronous tests are usually slow, so you should keep them separate from your faster unit tests. </p>
+<p>Select <em>New Unit Test Target…</em> from the <em>+</em> menu and name it <em>HalfTunesSlowTests</em>. Import the HalfTunes app just below the <code>import</code> statement:</p>
+<pre><code>@testable import HalfTunes
+</code></pre><p>The tests in this class will all use the default session to send requests to Apple’s servers, so declare a <code>sessionUnderTest</code> object, create it in <code>setup()</code> and release it in <code>tearDown()</code>:</p>
+<pre><code>var sessionUnderTest: URLSession!
+
+override func setUp() {
+  super.setUp()
+  sessionUnderTest = URLSession(configuration: URLSessionConfiguration.default)
+}
+
+override func tearDown() {
+  sessionUnderTest = nil
+  super.tearDown()
+}
+</code></pre><p>Replace <code>testExample()</code> with your asynchronous test:</p>
+<pre><code>// Asynchronous test: success fast, failure slow
+func testValidCallToiTunesGetsHTTPStatusCode200() {
+  // given
+  let url = URL(string: &quot;https://itunes.apple.com/search?media=music&amp;entity=song&amp;term=abba&quot;)
+  // 1
+  let promise = expectation(description: &quot;Status code: 200&quot;)
+
+  // when
+  let dataTask = sessionUnderTest.dataTask(with: url!) { data, response, error in
+    // then
+    if let error = error {
+      XCTFail(&quot;Error: (error.localizedDescription)&quot;)
+      return
+    } else if let statusCode = (response as? HTTPURLResponse)?.statusCode {
+      if statusCode == 200 {
+        // 2
+        promise.fulfill()
+      } else {
+        XCTFail(&quot;Status code: (statusCode)&quot;)
+      }
+    }
+  }
+  dataTask.resume()
+  // 3
+  waitForExpectations(timeout: 5, handler: nil)
+}
+</code></pre><p>This test checks to see that sending a valid query to iTunes returns a 200 status code. Most of the code is the same as what you’d write in the app, with these additional lines:</p>
+<ol>
+<li><code>expectation(_:)</code> returns an <code>XCTestExpectation</code> object, which you store in <code>promise</code>. Other commonly used names for this object are <code>expectation</code> and <code>future</code>. The <code>description</code> parameter describes what you expect to happen.</li>
+<li>To match the <code>description</code>, you call <code>promise.fulfill()</code> in the success condition closure of the asynchronous method’s completion handler. </li>
+<li><code>waitForExpectations(_:handler:)</code> keeps the test running until all expectations are fulfilled, or the <code>timeout</code> interval ends, whichever happens first.</li>
+</ol>
+<p>Run the test. If you’re connected to the internet, the test should take about a second to succeed after the app starts to load in the simulator.</p>
+<h3 id="Fail-Faster"><a href="#Fail-Faster" class="headerlink" title="Fail Faster"></a>Fail Faster</h3><p>Failure hurts, but it doesn’t have to take forever. Here you’ll address how to quickly find out if your tests fail, saving time that could be better wasted on Facebook. :]</p>
+<p>To modify your test so the asynchronous operation fails, simply delete the ‘s’ from “itunes” in the URL:</p>
+<pre><code>let url = URL(string: &quot;https://itune.apple.com/search?media=music&amp;entity=song&amp;term=abba&quot;)
+</code></pre><p>Run the test: it fails, but it takes the full timeout interval! This is because its expectation is that the request succeeded, and that’s where you called <code>promise.fulfill()</code>. Since the request fails, the test finishes only when the timeout expires. </p>
+<p>You can make this test fail faster by changing its expectation: instead of waiting for the request to succeed, wait only until the asynchronous method’s completion handler is invoked. This happens as soon as the app receives a response — either OK or error — from the server, which fulfills the expectation. Your test can then check whether the request succeeded.</p>
+<p>To see how this works, you’ll create a new test. First, fix this test by undoing the change to <code>url</code>, then add the following test to your class:</p>
+<pre><code>// Asynchronous test: faster fail
+func testCallToiTunesCompletes() {
+  // given
+  let url = URL(string: &quot;https://itune.apple.com/search?media=music&amp;entity=song&amp;term=abba&quot;)
+  // 1
+  let promise = expectation(description: &quot;Completion handler invoked&quot;)
+  var statusCode: Int?
+  var responseError: Error?
+
+  // when
+  let dataTask = sessionUnderTest.dataTask(with: url!) { data, response, error in
+    statusCode = (response as? HTTPURLResponse)?.statusCode
+    responseError = error
+    // 2
+    promise.fulfill()
+  }
+  dataTask.resume()
+  // 3
+  waitForExpectations(timeout: 5, handler: nil)
+
+  // then
+  XCTAssertNil(responseError)
+  XCTAssertEqual(statusCode, 200)
+}
+</code></pre><p>The key thing here is that simply entering the completion handler fulfills the expectation, and this takes about a second to happen. If the request fails, the <code>then</code> assertions fail.</p>
+<p>Run the test: it should now take about a second to fail, and it fails because the request failed, not because the test run exceeded <code>timeout</code>.</p>
+<p>Fix the <code>url</code>, then run the test again to confirm that it now succeeds.</p>
+<h2 id="Faking-Objects-and-Interactions"><a href="#Faking-Objects-and-Interactions" class="headerlink" title="Faking Objects and Interactions"></a>Faking Objects and Interactions</h2><p>Asynchronous tests give you confidence that your code <em>generates</em> correct input to an asynchronous API. You might also want to test that your code works correctly when it <em>receives</em> input from a <code>URLSession</code>, or that it correctly updates <code>UserDefaults</code> or a CloudKit database.</p>
+<p>Most apps interact with system or library objects — objects you don’t control — and tests that interact with these objects can be slow and unrepeatable, violating two of the FIRST principles. Instead, you can <em>fake</em> the interactions by getting input from <em>stubs</em> or by updating <em>mock</em> objects.</p>
+<p>Employ fakery when your code has a <em>dependency</em> on a system or library object — create a fake object to play that part and <em>inject</em> this fake into your code. <a href="https://www.objc.io/issues/15-testing/dependency-injection/" target="_blank" rel="noopener"><em>Dependency Injection</em> by Jon Reid</a> describes several ways to do this.</p>
+<p><img src="https://koenig-media.raywenderlich.com/uploads/2016/12/fake-433x320.png" alt="fake"></p>
+<h3 id="Fake-Input-From-Stub"><a href="#Fake-Input-From-Stub" class="headerlink" title="Fake Input From Stub"></a>Fake Input From Stub</h3><p>In this test, you’ll check that the app’s <code>updateSearchResults(_:)</code> method correctly parses data downloaded by the session by checking that <code>searchResults.count</code> is correct. The SUT is the view controller, and you’ll fake the session with stubs and some pre-downloaded data.</p>
+<p>Select <em>New Unit Test Target…</em> from the <em>+</em> menu and name it <em>HalfTunesFakeTests</em>. Import the HalfTunes app just below the <code>import</code> statement:</p>
+<pre><code>@testable import HalfTunes
+</code></pre><p>Declare the SUT, create it in <code>setup()</code> and release it in <code>tearDown()</code>:</p>
+<pre><code>var controllerUnderTest: SearchViewController!
+
+override func setUp() {
+  super.setUp()
+  controllerUnderTest = UIStoryboard(name: &quot;Main&quot;, 
+      bundle: nil).instantiateInitialViewController() as! SearchViewController!
+}
+
+override func tearDown() {
+  controllerUnderTest = nil
+  super.tearDown()
+}
+</code></pre><p><em>Note:</em> The SUT is the view controller because HalfTunes has a <em>massive</em> view controller problem — all the work is done in SearchViewController.swift. <a href="http://williamboles.me/networking-with-nsoperation-as-your-wingman/" target="_blank" rel="noopener">Moving the networking code into separate modules</a> would reduce this problem, and also make testing easier.</p>
+<p>Next, you’ll need some sample JSON data that your fake session will provide to your test. Just a few items will do, so to limit your download results in iTunes append <code>&amp;limit=3</code> to the URL string: </p>
+<pre><code>https://itunes.apple.com/search?media=music&amp;entity=song&amp;term=abba&amp;limit=3
+</code></pre><p>Copy this URL and paste it into a browser. This downloads a file named <em>1.txt</em> or similar. Preview it to confirm it’s a JSON file, then rename it <em>abbaData.json</em> and add the file to the <em>HalfTunesFakeTests</em> group.</p>
+<p>The HalfTunes project contains the supporting file <em>DHURLSessionMock.swift</em>. This defines a simple protocol named <code>DHURLSession</code>, with methods (stubs) to create a data task with either a <code>URL</code> or a <code>URLRequest</code>. It also defines <code>URLSessionMock</code> which conforms to this protocol, with initializers that let you create a mock <code>URLSession</code> object with your choice of data, response and error.</p>
+<p>Set up the fake data and response, and create the fake session object, in <code>setup()</code> after the statement that creates the SUT:</p>
+<pre><code>let testBundle = Bundle(for: type(of: self))
+let path = testBundle.path(forResource: &quot;abbaData&quot;, ofType: &quot;json&quot;)
+let data = try? Data(contentsOf: URL(fileURLWithPath: path!), options: .alwaysMapped)
+
+let url = URL(string: &quot;https://itunes.apple.com/search?media=music&amp;entity=song&amp;term=abba&quot;)
+let urlResponse = HTTPURLResponse(url: url!, statusCode: 200, httpVersion: nil, headerFields: nil)
+
+let sessionMock = URLSessionMock(data: data, response: urlResponse, error: nil)
+</code></pre><p>At the end of <code>setup()</code>, inject the fake session into the app as a property of the SUT:</p>
+<pre><code>controllerUnderTest.defaultSession = sessionMock
+</code></pre><p><em>Note:</em> You’ll use the fake session directly in your test, but this shows you how to inject it so that your future tests can call SUT methods that use the view controller’s <code>defaultSession</code> property.</p>
+<p>Now you’re ready to write the test that checks whether calling <code>updateSearchResults(_:)</code> parses the fake data. Replace <code>testExample()</code> with the following:</p>
+<pre><code>// Fake URLSession with DHURLSession protocol and stubs
+func test_UpdateSearchResults_ParsesData() {
+  // given
+  let promise = expectation(description: &quot;Status code: 200&quot;)
+
+  // when
+  XCTAssertEqual(controllerUnderTest?.searchResults.count, 0, &quot;searchResults should be empty before the data task runs&quot;)
+  let url = URL(string: &quot;https://itunes.apple.com/search?media=music&amp;entity=song&amp;term=abba&quot;)
+  let dataTask = controllerUnderTest?.defaultSession.dataTask(with: url!) {
+    data, response, error in
+    // if HTTP request is successful, call updateSearchResults(_:) which parses the response data into Tracks
+    if let error = error {
+      print(error.localizedDescription)
+    } else if let httpResponse = response as? HTTPURLResponse {
+      if httpResponse.statusCode == 200 {
+        promise.fulfill()
+        self.controllerUnderTest?.updateSearchResults(data)
+      }
+    }
+  }
+  dataTask?.resume()
+  waitForExpectations(timeout: 5, handler: nil)
+
+  // then
+  XCTAssertEqual(controllerUnderTest?.searchResults.count, 3, &quot;Didn&apos;t parse 3 items from fake response&quot;)
+}
+</code></pre><p>You still have to write this as an asynchronous test because the stub is pretending to be an asynchronous method.</p>
+<p>The <em>when</em> assertion is that <code>searchResults</code> is empty before the data task runs — this should be true, because you created a completely new SUT in <code>setup()</code>.</p>
+<p>The fake data contains the JSON for three <code>Track</code> objects, so the <em>then</em> assertion is that the view controller’s <code>searchResults</code> array contains three items.</p>
+<p>Run the test. It should succeed pretty quickly, because there isn’t any real network connection!</p>
+<h3 id="Fake-Update-to-Mock-Object"><a href="#Fake-Update-to-Mock-Object" class="headerlink" title="Fake Update to Mock Object"></a>Fake Update to Mock Object</h3><p>The previous test used a <em>stub</em> to provide input from a fake object. Next, you’ll use a <em>mock object</em> to test that your code correctly updates <code>UserDefaults</code>.</p>
+<p>Reopen the <em>BullsEye</em> project. The app has two game styles: the user either moves the slider to match the target value or guesses the target value from the slider position. A segmented control in the lower-right corner switches the game style and updates the <code>gameStyle</code> user default to match.</p>
+<p>Your next test will check that the app correctly updates the <code>gameStyle</code> user default.</p>
+<p>In the test navigator, click on <em>New Unit Test Target…</em> and name it <em>BullsEyeMockTests</em>. Add the following below the <code>import</code> statement:</p>
+<pre><code>@testable import BullsEye
+
+class MockUserDefaults: UserDefaults {
+  var gameStyleChanged = 0
+  override func set(_ value: Int, forKey defaultName: String) {
+    if defaultName == &quot;gameStyle&quot; {
+      gameStyleChanged += 1
+    }
+  }
+}
+</code></pre><p><code>MockUserDefaults</code> overrides the <code>set(_:forKey:)</code> method to increment the <code>gameStyleChanged</code> flag. Often you’ll see similar tests that set a <code>Bool</code> variable, but incrementing an <code>Int</code> gives you more flexibility — for example, your test could check that the method is called exactly once.</p>
+<p>Declare the SUT and the mock object in <code>BullsEyeMockTests</code>:</p>
+<pre><code>var controllerUnderTest: ViewController!
+var mockUserDefaults: MockUserDefaults!
+</code></pre><p>In <code>setup()</code>, create the SUT and the mock object, then inject the mock object as a property of the SUT:</p>
+<pre><code>controllerUnderTest = UIStoryboard(name: &quot;Main&quot;, bundle: nil).instantiateInitialViewController() as! ViewController!
+mockUserDefaults = MockUserDefaults(suiteName: &quot;testing&quot;)!
+controllerUnderTest.defaults = mockUserDefaults
+</code></pre><p>Release the SUT and the mock object in <code>tearDown()</code>:</p>
+<pre><code>controllerUnderTest = nil
+mockUserDefaults = nil
+</code></pre><p>Replace <code>testExample()</code> with this:</p>
+<pre><code>// Mock to test interaction with UserDefaults
+func testGameStyleCanBeChanged() {
+  // given
+  let segmentedControl = UISegmentedControl()
+
+  // when
+  XCTAssertEqual(mockUserDefaults.gameStyleChanged, 0, &quot;gameStyleChanged should be 0 before sendActions&quot;)
+  segmentedControl.addTarget(controllerUnderTest, 
+      action: #selector(ViewController.chooseGameStyle(_:)), for: .valueChanged)
+  segmentedControl.sendActions(for: .valueChanged)
+
+  // then
+  XCTAssertEqual(mockUserDefaults.gameStyleChanged, 1, &quot;gameStyle user default wasn&apos;t changed&quot;)
+}
+</code></pre><p>The <em>when</em> assertion is that the <code>gameStyleChanged</code> flag is 0 before the test method “taps” the segmented control. So if the <em>then</em> assertion is also true, it means <code>set(_:forKey:)</code> was called exactly once.</p>
+<p>Run the test; it should succeed.</p>
+<h2 id="UI-Testing-in-Xcode"><a href="#UI-Testing-in-Xcode" class="headerlink" title="UI Testing in Xcode"></a>UI Testing in Xcode</h2><p>Xcode 7 introduced UI testing, which lets you create a UI test by recording interactions with the UI. UI testing works by finding an app’s UI objects with queries, synthesizing events, then sending them to those objects. The API enables you to examine a UI object’s properties and state in order to compare them against the expected state.</p>
+<p>In the <em>BullsEye</em> project’s test navigator, add a new <em>UI Test Target</em>. Check that <em>Target to be Tested</em> is <em>BullsEye</em>, then accept the default name <em>BullsEyeUITests</em>.</p>
+<p>Add this property at the top of the <code>BullsEyeUITests</code> class:</p>
+<pre><code>var app: XCUIApplication!
+</code></pre><p>In <code>setup()</code>, replace the statement <code>XCUIApplication().launch()</code> with the following:</p>
+<pre><code>app = XCUIApplication()
+app.launch()
+</code></pre><p>Change the name of <code>testExample()</code> to <code>testGameStyleSwitch()</code>.</p>
+<p>Open a new line in <code>testGameStyleSwitch()</code> and click the red <em>Record</em> button at the bottom of the editor window:</p>
+<p><img src="https://koenig-media.raywenderlich.com/uploads/2016/12/UITest.png" alt="iOS Unit Testing: Recording a UI Test"></p>
+<p>When the app appears in the simulator, tap the <em>Slide</em> segment of the game style switch and the top label. Then click the Xcode Record button to stop the recording.</p>
+<p>You now have the following three lines in <code>testGameStyleSwitch()</code>:</p>
+<pre><code>let app = XCUIApplication()
+app.buttons[&quot;Slide&quot;].tap()
+app.staticTexts[&quot;Get as close as you can to: &quot;].tap()
+</code></pre><p>If there are any other statements, delete them.</p>
+<p>Line 1 duplicates the property you created in <code>setup()</code> and you don’t need to tap anything yet, so also delete the first line and the <code>.tap()</code> at the end of lines 2 and 3. Open the little menu next to [<code>&quot;Slide&quot;]</code> and select <code>segmentedControls.buttons[&quot;Slide&quot;]</code>. </p>
+<p>So what you have is:</p>
+<pre><code>app.segmentedControls.buttons[&quot;Slide&quot;]
+app.staticTexts[&quot;Get as close as you can to: &quot;]
+</code></pre><p>Alter this to create a <em>given</em> section:</p>
+<pre><code>// given
+let slideButton = app.segmentedControls.buttons[&quot;Slide&quot;]
+let typeButton = app.segmentedControls.buttons[&quot;Type&quot;]
+let slideLabel = app.staticTexts[&quot;Get as close as you can to: &quot;]
+let typeLabel = app.staticTexts[&quot;Guess where the slider is: &quot;]
+</code></pre><p>Now that you have names for the two buttons and the two possible top labels, add the following:</p>
+<pre><code>// then
+if slideButton.isSelected {
+  XCTAssertTrue(slideLabel.exists)
+  XCTAssertFalse(typeLabel.exists)
+
+  typeButton.tap()
+  XCTAssertTrue(typeLabel.exists)
+  XCTAssertFalse(slideLabel.exists)
+} else if typeButton.isSelected {
+  XCTAssertTrue(typeLabel.exists)
+  XCTAssertFalse(slideLabel.exists)
+
+  slideButton.tap()
+  XCTAssertTrue(slideLabel.exists)
+  XCTAssertFalse(typeLabel.exists)
+}
+</code></pre><p>This checks to see whether the correct label exists when each button is selected or tapped. Run the test — all the assertions should succeed.</p>
+<h2 id="Performance-Testing"><a href="#Performance-Testing" class="headerlink" title="Performance Testing"></a>Performance Testing</h2><p>From <a href="https://developer.apple.com/library/prerelease/content/documentation/DeveloperTools/Conceptual/testing_with_xcode/chapters/04-writing_tests.html#//apple_ref/doc/uid/TP40014132-CH4-SW8" target="_blank" rel="noopener">Apple’s documentation</a>: <em>A performance test takes a block of code that you want to evaluate and runs it ten times, collecting the average execution time and the standard deviation for the runs. The averaging of these individual measurements form a value for the test run that can then be compared against a baseline to evaluate success or failure.</em></p>
+<p>It’s very simple to write a performance test: you just put the code you want to measure into the closure of the <code>measure()</code> method. </p>
+<p>To see this in action, reopen the <em>HalfTunes</em> project and, in <em>HalfTunesFakeTests</em>, replace <code>testPerformanceExample()</code> with the following test:</p>
+<pre><code>// Performance 
+func test_StartDownload_Performance() {
+  let track = Track(name: &quot;Waterloo&quot;, artist: &quot;ABBA&quot;, 
+      previewUrl: &quot;http://a821.phobos.apple.com/us/r30/Music/d7/ba/ce/mzm.vsyjlsff.aac.p.m4a&quot;)
+  measure {
+    self.controllerUnderTest?.startDownload(track)
+  }
+}
+</code></pre><p>Run the test, then click the icon that appears next to the end of the <code>measure()</code> closure to see the statistics.</p>
+<p><img src="https://koenig-media.raywenderlich.com/uploads/2016/12/PerformanceResult-650x228.png" alt="iOS Unit Testing: Viewing a Performance Result"></p>
+<p>Click <em>Set Baseline</em>, then run the performance test again and view the result — it might be better or worse than the baseline. The <em>Edit</em> button lets you reset the baseline to this new result.</p>
+<p>Baselines are stored per device configuration, so you can have the same test executing on several different devices, and have each maintain a different baseline dependent upon the specific configuration’s processor speed, memory, etc.</p>
+<p>Anytime you make changes to an app that might impact the performance of the method being tested, run the performance test again to see how it compares to the baseline.</p>
+<h2 id="Code-Coverage"><a href="#Code-Coverage" class="headerlink" title="Code Coverage"></a>Code Coverage</h2><p>The code coverage tool tells you what app code is actually being run by your tests, so you know what parts of the app code aren’t (yet) being tested.</p>
+<p><em>Note:</em> Should you run performance tests while code coverage is enabled? <a href="https://developer.apple.com/library/prerelease/content/documentation/DeveloperTools/Conceptual/testing_with_xcode/chapters/07-code_coverage.html#//apple_ref/doc/uid/TP40014132-CH15-SW1" target="_blank" rel="noopener">Apple’s documentation</a> says: <em>Code coverage data collection incurs a performance penalty … affect[ing] execution of the code in a linear fashion so performance results remain comparable from test run to test run when it is enabled. However, you should consider whether to have code coverage enabled when you are critically evaluating the performance of routines in your tests.</em></p>
+<p>To enable code coverage, edit the scheme’s <em>Test</em> action and tick the <em>Code Coverage</em> box:</p>
+<p><img src="https://koenig-media.raywenderlich.com/uploads/2016/12/CodeCoverageSwitch.png" alt="iOS Unit Testing: Setting the Code Coverage Switch"></p>
+<p>Run <em>all</em> your tests (Command-U), then open the reports navigator (Command-8). Select <em>By Time</em>, select the top item in that list, then select the <em>Coverage</em> tab:</p>
+<p><img src="https://koenig-media.raywenderlich.com/uploads/2016/12/CoverageReport1-650x189.png" alt="iOS Unit Testing: Code Coverage Report"></p>
+<p>Click the disclosure triangle to see the list of functions in <em>SearchViewController.swift</em>:</p>
+<p><img src="https://koenig-media.raywenderlich.com/uploads/2016/12/CoverageReport2-650x252.png" alt="iOS Unit Testing: Code Coverage Report"></p>
+<p>Mouse over the blue Coverage bar next to <code>updateSearchResults(_:)</code> to see that coverage is 71.88%.</p>
+<p>Click the arrow button for this function to open the source file, then locate the function. As you mouse over the coverage annotations in the right sidebar, sections of code highlight green or red:</p>
+<p><img src="https://koenig-media.raywenderlich.com/uploads/2016/12/CoverageReport4-650x436.png" alt="iOS Unit Testing: Good and Bad Code Coverage"></p>
+<p>The coverage annotations show how many times a test hit each code section; sections that weren’t called are highlighted in red. As you’d expect, the for-loop ran 3 times, but nothing in the error paths was executed. To increase coverage of this function, you could duplicate <em>abbaData.json</em>, then edit it so it causes the different errors — for example, change <code>&quot;results&quot;</code> to <code>&quot;result&quot;</code> for a test that hits <code>print(&quot;Results key not found in dictionary&quot;)</code>.</p>
+<h3 id="100-Coverage"><a href="#100-Coverage" class="headerlink" title="100% Coverage?"></a>100% Coverage?</h3><p>How hard should you strive for 100% code coverage? Google “100% unit test coverage”, and you’ll find a range of arguments for and against, along with debate over the very definition of “100% coverage”. Arguments-against say the last 10-15% isn’t worth the effort. Arguments-for say the last 10-15% is the most important, <em>because</em> it’s hard to test. Google “hard to unit test bad design” to find persuasive arguments that <a href="https://www.toptal.com/qa/how-to-write-testable-code-and-why-it-matters" target="_blank" rel="noopener">untestable code is a sign of deeper design problems</a>. Further contemplation might lead to the conclusion that <a href="http://qualitycoding.org/tdd-sample-archives/" target="_blank" rel="noopener">Test Driven Development</a> is the way to go.</p>
+<h2 id="Where-to-Go-From-Here"><a href="#Where-to-Go-From-Here" class="headerlink" title="Where to Go From Here?"></a>Where to Go From Here?</h2><p>You now have some great tools to use in writing tests for your projects. I hope this iOS Unit Testing and UI Testing tutorial has given you the confidence to test <em>all the things</em>!</p>
+<p>You can find the completed projects in this <a href="https://koenig-media.raywenderlich.com/uploads/2016/12/Finished-3.zip" target="_blank" rel="noopener">zip file</a>.</p>
+<p>Here are some resources for further study:</p>
+<p>If you have any questions or comments on this tutorial, please join the forum discussion below. :]</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Test/" rel="tag"># Test</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/12/10/Interview/招聘一个靠谱的 iOS/" rel="next" title="招聘一个靠谱的 iOS">
+                <i class="fa fa-chevron-left"></i> 招聘一个靠谱的 iOS
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/01/05/learn programming/10 Steps to become a Senior Software Engineer/" rel="prev" title="10 Steps to become a Senior Software Engineer">
+                10 Steps to become a Senior Software Engineer <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="Xin Jie" />
+          <p class="site-author-name" itemprop="name">Xin Jie</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#iOS-Unit-Testing-and-UI-Testing-Tutorial"><span class="nav-number">1.</span> <span class="nav-text">iOS Unit Testing and UI Testing Tutorial</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Testing-Testing-…"><span class="nav-number">1.1.</span> <span class="nav-text">Testing, Testing …</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#What-to-Test"><span class="nav-number">1.1.1.</span> <span class="nav-text">What to Test?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#First-Things-FIRST-Best-Practices-for-Testing"><span class="nav-number">1.1.2.</span> <span class="nav-text">First Things FIRST: Best Practices for Testing</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Getting-Started"><span class="nav-number">1.2.</span> <span class="nav-text">Getting Started</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Unit-Testing-in-Xcode"><span class="nav-number">1.3.</span> <span class="nav-text">Unit Testing in Xcode</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Creating-a-Unit-Test-Target"><span class="nav-number">1.3.1.</span> <span class="nav-text">Creating a Unit Test Target</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Using-XCTAssert-to-Test-Models"><span class="nav-number">1.3.2.</span> <span class="nav-text">Using XCTAssert to Test Models</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Debugging-a-Test"><span class="nav-number">1.3.3.</span> <span class="nav-text">Debugging a Test</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Using-XCTestExpectation-to-Test-Asynchronous-Operations"><span class="nav-number">1.3.4.</span> <span class="nav-text">Using XCTestExpectation to Test Asynchronous Operations</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Fail-Faster"><span class="nav-number">1.3.5.</span> <span class="nav-text">Fail Faster</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Faking-Objects-and-Interactions"><span class="nav-number">1.4.</span> <span class="nav-text">Faking Objects and Interactions</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Fake-Input-From-Stub"><span class="nav-number">1.4.1.</span> <span class="nav-text">Fake Input From Stub</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Fake-Update-to-Mock-Object"><span class="nav-number">1.4.2.</span> <span class="nav-text">Fake Update to Mock Object</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#UI-Testing-in-Xcode"><span class="nav-number">1.5.</span> <span class="nav-text">UI Testing in Xcode</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Performance-Testing"><span class="nav-number">1.6.</span> <span class="nav-text">Performance Testing</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Code-Coverage"><span class="nav-number">1.7.</span> <span class="nav-text">Code Coverage</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#100-Coverage"><span class="nav-number">1.7.1.</span> <span class="nav-text">100% Coverage?</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Where-to-Go-From-Here"><span class="nav-number">1.8.</span> <span class="nav-text">Where to Go From Here?</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Xin Jie</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

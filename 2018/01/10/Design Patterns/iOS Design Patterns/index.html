@@ -1,0 +1,1648 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Design Patterns," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="Source iOS Design PatternsiOS Design Patterns – you’ve probably heard the term, but do you know what it means? While most developers probably agree that design ">
+<meta name="keywords" content="Design Patterns">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS Design Patterns">
+<meta property="og:url" content="http://yoursite.com/2018/01/10/Design Patterns/iOS Design Patterns/index.html">
+<meta property="og:site_name" content="XinJie&#39;s Notes">
+<meta property="og:description" content="Source iOS Design PatternsiOS Design Patterns – you’ve probably heard the term, but do you know what it means? While most developers probably agree that design patterns are very important, there aren’">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://koenig-media.raywenderlich.com/uploads/2013/07/finalapp-180x320.png">
+<meta property="og:image" content="https://koenig-media.raywenderlich.com/uploads/2013/07/mvcking.png">
+<meta property="og:image" content="https://koenig-media.raywenderlich.com/uploads/2013/07/mvc0.png">
+<meta property="og:image" content="https://koenig-media.raywenderlich.com/uploads/2013/07/mvc2-255x320.png">
+<meta property="og:image" content="https://koenig-media.raywenderlich.com/uploads/2013/08/singleton.png">
+<meta property="og:image" content="https://koenig-media.raywenderlich.com/uploads/2013/07/facade.jpg">
+<meta property="og:image" content="https://koenig-media.raywenderlich.com/uploads/2013/07/facade2-480x241.png">
+<meta property="og:image" content="https://koenig-media.raywenderlich.com/uploads/2013/08/design-patterns-facade-uml-480x71.png">
+<meta property="og:image" content="https://koenig-media.raywenderlich.com/uploads/2013/09/2013-09-01_12-08-44-211x320.png">
+<meta property="og:image" content="https://koenig-media.raywenderlich.com/uploads/2013/08/design-patterns-category1.png">
+<meta property="og:image" content="https://koenig-media.raywenderlich.com/uploads/2013/08/delegate2-480x67.png">
+<meta property="og:image" content="https://koenig-media.raywenderlich.com/uploads/2013/08/delegate-480x252.png">
+<meta property="og:image" content="https://koenig-media.raywenderlich.com/uploads/2013/09/2013-09-01_15-57-32-700x112.png">
+<meta property="og:image" content="https://koenig-media.raywenderlich.com/uploads/2013/08/design-pattern-stage1.png">
+<meta property="og:image" content="https://koenig-media.raywenderlich.com/uploads/2013/08/protocol1.png">
+<meta property="og:image" content="https://koenig-media.raywenderlich.com/uploads/2013/08/design-patterns-3-298x320.png">
+<meta property="og:image" content="https://koenig-media.raywenderlich.com/uploads/2013/08/design-patterns-4-297x320.png">
+<meta property="og:image" content="https://koenig-media.raywenderlich.com/uploads/2013/08/design-pattern-stage3-287x320.png">
+<meta property="og:image" content="https://koenig-media.raywenderlich.com/uploads/2013/09/2013-09-02_10-51-27-214x320.png">
+<meta property="og:image" content="https://koenig-media.raywenderlich.com/uploads/2013/09/2013-09-02_10-56-59-214x320.png">
+<meta property="og:image" content="https://koenig-media.raywenderlich.com/uploads/2013/08/design-pattern-stage4-180x320.png">
+<meta property="og:updated_time" content="2018-01-10T15:48:23.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="iOS Design Patterns">
+<meta name="twitter:description" content="Source iOS Design PatternsiOS Design Patterns – you’ve probably heard the term, but do you know what it means? While most developers probably agree that design patterns are very important, there aren’">
+<meta name="twitter:image" content="https://koenig-media.raywenderlich.com/uploads/2013/07/finalapp-180x320.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/01/10/Design Patterns/iOS Design Patterns/"/>
+
+
+
+
+
+  <title>iOS Design Patterns | XinJie's Notes</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">XinJie's Notes</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">life is too short to play it safe</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/10/Design Patterns/iOS Design Patterns/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Xin Jie">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="XinJie's Notes">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">iOS Design Patterns</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-10T22:13:00+08:00">
+                2018-01-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><a href="https://www.raywenderlich.com/46988/ios-design-patterns" title="Permalink to iOS Design Patterns" target="_blank" rel="noopener">Source</a></p>
+<h1 id="iOS-Design-Patterns"><a href="#iOS-Design-Patterns" class="headerlink" title="iOS Design Patterns"></a>iOS Design Patterns</h1><p><em>iOS Design Patterns</em> – you’ve probably heard the term, but do you know what it means? While most developers probably agree that design patterns are very important, there aren’t many articles on the subject and we developers sometimes don’t pay too much attention to design patterns while writing code.</p>
+<p>Design patterns are reusable solutions to common problems in software design. They’re templates designed to help you write code that’s easy to understand and reuse. They also help you create loosely coupled code so that you can change or replace components in your code without too much of a hassle.</p>
+<p>If you’re new to design patterns, then I have good news for you! First, you’re already using tons of iOS design patterns thanks to the way Cocoa is built and the best practices you’re encouraged to use. Second, this tutorial will bring you up to speed on all the major (and not so major) iOS design patterns that are commonly used in Cocoa.</p>
+<p>The tutorial is divided into sections, one section per design pattern. In each section, you’ll read an explanation of the following:</p>
+<ul>
+<li><em>What</em> the design pattern is.</li>
+<li><em>Why</em> you should use it.</li>
+<li><em>How</em> to use it and, where appropriate, common pitfalls to watch for when using the pattern.</li>
+</ul>
+<p>In this tutorial, you will create a Music Library app that will display your albums and their relevant information. </p>
+<p>In the process of developing this app, you’ll become acquainted with the most common Cocoa design patterns:</p>
+<ul>
+<li><em>Creational</em>: Singleton and Abstract Factory.</li>
+<li><em>Structural</em>: MVC, Decorator, Adapter, Facade and Composite.</li>
+<li><em>Behavioral</em>: Observer, Memento, Chain of Responsibility and Command.</li>
+</ul>
+<p>Don’t be misled into thinking that this is an article about theory; you’ll get to use most of these design patterns in your music app. Your app will look like this by the end of the tutorial:</p>
+<p><img src="https://koenig-media.raywenderlich.com/uploads/2013/07/finalapp-180x320.png" alt="finalapp"></p>
+<h2 id="Getting-Started"><a href="#Getting-Started" class="headerlink" title="Getting Started"></a>Getting Started</h2><p>Download the <a href="https://koenig-media.raywenderlich.com/uploads/2013/07/BlueLibrary-Starter.zip" target="_blank" rel="noopener">starter project</a>, extract the contents of the ZIP file, and open <em>BlueLibrary.xcodeproj</em> in Xcode.</p>
+<p>There’s not a lot there, just the default <code>ViewController</code> and a simple HTTP Client with empty implementations. </p>
+<p><em>Note:</em> Did you know that as soon as you create a new Xcode project your code is already filled with design patterns? MVC, Delegate, Protocol, Singleton – You get them all for free! :]</p>
+<p>Before you dive into the first design pattern, you must create two classes to hold and display the album data.</p>
+<p>Navigate to <em>“FileNewFile…”</em> (or simply press <em>Command+N</em>). Select <em>iOS &gt; Cocoa Touch</em> and then <em>Objective-C class</em> and click <em>Next</em>. Set the class name to <code>Album</code> and the subclass to <code>NSObject</code>. Click <em>Next</em> and then <em>Create</em>.</p>
+<p>Open <em>Album.h</em> and add the following properties and method prototype between <code>@interface</code> and <code>@end</code>:</p>
+<pre><code>@property (nonatomic, copy, readonly) NSString *title, *artist, *genre, *coverUrl, *year;
+
+- (id)initWithTitle:(NSString*)title artist:(NSString*)artist coverUrl:(NSString*)coverUrl year:(NSString*)year;
+</code></pre><p>Note that all the properties are <em>readonly</em>, since there’s no need to change them after the <code>Album</code> object is created.<br>The method is the object initializer. When you create a new album, you’ll pass in the album name, the artist, the album cover URL, and the year.</p>
+<p>Now open <em>Album.m</em> and add the following code between <code>@implementation</code> and <code>@end</code>:</p>
+<pre><code>- (id)initWithTitle:(NSString*)title artist:(NSString*)artist coverUrl:(NSString*)coverUrl year:(NSString*)year
+{
+    self = [super init];
+    if (self)
+    {
+        _title = title;
+        _artist = artist;
+        _coverUrl = coverUrl;
+        _year = year;
+        _genre = @&quot;Pop&quot;;
+    }
+    return self;
+}
+</code></pre><p>There’s nothing fancy here; just a simple init method to create new <em>Album</em> instances.</p>
+<p>Again, navigate to <em>FileNewFile…</em>. Select <em>Cocoa Touch</em> and then <em>Objective-C class</em> and click <em>Next</em>. Set the class name to <em>AlbumView</em>, but this time set the subclass to <em>UIView</em>. Click <em>Next</em> and then <em>Create</em>.</p>
+<p><em>Note:</em> If you find keyboard shortcuts easier to use then, <em>Command+N</em> will create a new file, <em>Command+Option+N</em> will create a new group, <em>Command+B</em> will build your project, and <em>Command+R</em> will run it.</p>
+<p>Open <em>AlbumView.h</em> and add the following method prototype between <code>@interface</code> and <code>@end</code></p>
+<pre><code>- (id)initWithFrame:(CGRect)frame albumCover:(NSString*)albumCover;
+</code></pre><p>Now open <em>AlbumView.m</em> and replace all the code after <code>@implementation</code> with the following code:</p>
+<pre><code>@implementation AlbumView
+{
+    UIImageView *coverImage;
+    UIActivityIndicatorView *indicator;
+}
+
+- (id)initWithFrame:(CGRect)frame albumCover:(NSString*)albumCover
+{
+    self = [super initWithFrame:frame];
+    if (self)
+    {
+
+        self.backgroundColor = [UIColor blackColor];
+        // the coverImage has a 5 pixels margin from its frame
+        coverImage = [[UIImageView alloc] initWithFrame:CGRectMake(5, 5, frame.size.width-10, frame.size.height-10)];
+        [self addSubview:coverImage];
+
+        indicator = [[UIActivityIndicatorView alloc] init];
+        indicator.center = self.center;
+        indicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyleWhiteLarge;
+        [indicator startAnimating];
+        [self addSubview:indicator];
+    }
+    return self;
+}
+
+@end
+</code></pre><p>The first thing you notice here is that there’s an instance variable named <code>coverImage</code>. This variable represents the album cover image. The second variable is an indicator that spins to indicate activity while the cover is being downloaded.</p>
+<p>In the implementation of the initializer you set the background to black, create the image view with a small margin of 5 pixels and create and add the activity indicator.</p>
+<p><em>Note:</em> Wondering why the private variables were defined in the implementation file and not in the interface file? This is because no class outside the AlbumView class needs to know of the existence of these variables since they are used only in the implementation of the class’s internal functionality. This convention is extremely important if you’re creating a library or framework for other developers to use.</p>
+<p>Build your project (<em>Command+B</em>) just to make sure everything is in order. All good? Then get ready for your first design pattern! :]</p>
+<h2 id="MVC-–-The-King-of-Design-Patterns"><a href="#MVC-–-The-King-of-Design-Patterns" class="headerlink" title="MVC – The King of Design Patterns"></a>MVC – The King of Design Patterns</h2><p><img src="https://koenig-media.raywenderlich.com/uploads/2013/07/mvcking.png" alt="mvcking"></p>
+<p>Model View Controller (MVC) is one of the building blocks of Cocoa and is undoubtedly the most-used design pattern of all. It classifies objects according to their general role in your application and encourages clean separation of code based on role.</p>
+<p>The three roles are:</p>
+<ul>
+<li><em>Model</em>: The object that holds your application data and defines how to manipulate it. For example, in your application the Model is your <code>Album</code> class.</li>
+<li><em>View</em>: The objects that are in charge of the visual representation of the Model and the controls the user can interact with; basically, all the <code>UIView</code>s and their subclasses. In your application the View is represented by your <code>AlbumView</code> class.</li>
+<li><em>Controller</em>: The controller is the mediator that coordinates all the work. It accesses the data from the model and displays it with the views, listens to events and manipulates the data as necessary. Can you guess which class is your controller? That’s right: <code>ViewController</code>.</li>
+</ul>
+<p>A good implementation of this design pattern in your application means that each object falls into one of these groups.</p>
+<p>The communication between View to Model through Controller can be best described with the following diagram: </p>
+<p><img src="https://koenig-media.raywenderlich.com/uploads/2013/07/mvc0.png" alt="mvc0"></p>
+<p>The Model notifies the Controller of any data changes, and in turn, the Controller updates the data in the Views. The View can then notify the Controller of actions the user performed and the Controller will either update the Model if necessary or retrieve any requested data.</p>
+<p>You might be wondering why you can’t just ditch the Controller, and implement the View and Model in the same class, as that seems a lot easier. </p>
+<p>It all comes down to code separation and reusability. Ideally, the View should be completely separated from the Model. If the View doesn’t rely on a specific implementation of the Model, then it can be reused with a different model to present some other data.</p>
+<p>For example, if in the future you’d also like to add movies or books to your library, you could still use the same <code>AlbumView</code> to display your movie and book objects. Furthermore, if you want to create a new project that has something to do with albums, you could simply reuse your <code>Album</code> class, because it’s not dependent on any view. That’s the strength of MVC!</p>
+<h2 id="How-to-Use-the-MVC-Pattern"><a href="#How-to-Use-the-MVC-Pattern" class="headerlink" title="How to Use the MVC Pattern"></a>How to Use the MVC Pattern</h2><p>First, you need to ensure that each class in your project is either a Controller, a Model or a View; don’t combine the functionality of two roles in one class. You’ve already done a good job so far by creating an <code>Album</code> class and an <code>AlbumView</code> class.</p>
+<p>Second, in order to ensure that you conform to this method of work you should create three project groups to hold your code, one for each category.</p>
+<p>Navigate to <em>FileNewGroup</em> (or press on <em>Command+Option+N</em>) and name the group <em>Model</em>. Repeat the same process to create <em>View</em> and <em>Controller</em> groups.</p>
+<p>Now drag <em>Album.h</em> and <em>Album.m</em> to the Model group. Drag <em>AlbumView.h</em> and <em>AlbumView.m</em> to the View group, and finally drag <em>ViewController.h</em> and <em>ViewController.m</em> to the Controller group.</p>
+<p>At this point the project structure should look like this: </p>
+<p><img src="https://koenig-media.raywenderlich.com/uploads/2013/07/mvc2-255x320.png" alt="mvc2"></p>
+<p>Your project already looks a lot better without all those files floating around. Obviously you can have other groups and classes, but the core of the application is contained in these three categories.</p>
+<p>Now that your components are organized, you need to get the album data from somewhere. You’ll create an API class to use throughout your code to manage the data — which presents an opportunity to discuss your next design pattern — the Singleton.</p>
+<h2 id="The-Singleton-Pattern"><a href="#The-Singleton-Pattern" class="headerlink" title="The Singleton Pattern"></a>The Singleton Pattern</h2><p>The Singleton design pattern ensures that only one instance exists for a given class and that there’s a global access point to that instance. It usually uses lazy loading to create the single instance when it’s needed the first time.</p>
+<p><em>Note:</em> Apple uses this approach a lot. For example: [<code>NSUserDefaults standardUserDefaults]</code>, [<code>UIApplication sharedApplication]</code>, [<code>UIScreen mainScreen]</code>, [<code>NSFileManager defaultManager]</code> all return a Singleton object.</p>
+<p>You’re likely wondering why you care if there’s more than one instance of a class floating around. Code and memory is cheap, right?</p>
+<p>There are some cases in which it makes sense to have exactly one instance of a class. For example, there’s no need to have multiple <code>Logger</code> instances out there, unless you want to write to several log files at once. Or, take a global configuration handler class: it’s easier to implement a thread-safe access to a single shared resource, such as a configuration file, than to have many class modifying the configuration file possibly at the same time.</p>
+<h2 id="How-to-Use-the-Singleton-Pattern"><a href="#How-to-Use-the-Singleton-Pattern" class="headerlink" title="How to Use the Singleton Pattern"></a>How to Use the Singleton Pattern</h2><p>Take a look at the diagram below:</p>
+<p><img src="https://koenig-media.raywenderlich.com/uploads/2013/08/singleton.png" alt="singleton"></p>
+<p>The above image shows a Logger class with a single property (which is the single instance), and two methods: <code>sharedInstance</code> and <code>init</code>.<br>The first time a client sends the <code>sharedInstance</code> message, the property <code>instance</code> isn’t yet initialized, so you create a new instance of the class and return a reference to it. </p>
+<p>The next time you call <code>sharedInstance</code>, <code>instance</code> is immediately returned without any initialization. This logic promises that only one instance exists at all times.</p>
+<p>You’ll implement this pattern by creating a singleton class to manage all the album data. </p>
+<p>You’ll notice there’s a group called <em>API</em> in the project; this is where you’ll put all the classes that will provide services to your app. Inside this group create a new class with the <em>iOSCocoa TouchObjective-C class</em> template. Name the class <em>LibraryAPI</em>, and make it a subclass of <code>NSObject</code>.</p>
+<p>Open <em>LibraryAPI.h</em> and replace its contents with the following:</p>
+<pre><code>@interface LibraryAPI : NSObject
+
++ (LibraryAPI*)sharedInstance;
+
+@end
+</code></pre><p>Now go to <em>LibraryAPI.m</em> and insert this method right after the <code>@implentation</code> line:</p>
+<pre><code>+ (LibraryAPI*)sharedInstance
+{
+    // 1
+    static LibraryAPI *_sharedInstance = nil;
+
+    // 2
+    static dispatch_once_t oncePredicate;
+
+    // 3
+    dispatch_once(&amp;oncePredicate, ^{
+        _sharedInstance = [[LibraryAPI alloc] init];
+    });
+    return _sharedInstance;
+}
+</code></pre><p>There’s a lot going on in this short method:</p>
+<ol>
+<li>Declare a static variable to hold the instance of your class, ensuring it’s available globally inside your class.</li>
+<li>Declare the static variable <code>dispatch_once_t</code> which ensures that the initialization code executes only once.</li>
+<li>Use Grand Central Dispatch (GCD) to execute a block which initializes an instance of <code>LibraryAPI</code>. This is the essence of the Singleton design pattern: the initializer is never called again once the class has been instantiated.</li>
+</ol>
+<p>The next time you call <code>sharedInstance</code>, the code inside the <code>dispatch_once</code> block won’t be executed (since it’s already executed once) and you receive a reference to the previously created instance of <code>LibraryAPI</code>.</p>
+<p>You now have a Singleton object as the entry point to manage the albums. Take it a step further and create a class to handle the persistence of your library data.</p>
+<p>Create a new class with the <em>iOSCocoa TouchObjective-C class</em> template inside the API group. Name the class <code>PersistencyManager</code>, and make it a subclass of <code>NSObject</code>.</p>
+<p>Open <em>PersistencyManager.h</em>. Add the following import to the top of the file:</p>
+<pre><code>#import &quot;Album.h&quot;
+</code></pre><p>Next, add the following code to <em>PersistencyManager.h</em> after the <code>@interface</code> line:</p>
+<pre><code>- (NSArray*)getAlbums;
+- (void)addAlbum:(Album*)album atIndex:(int)index;
+- (void)deleteAlbumAtIndex:(int)index;
+</code></pre><p>The above are prototypes for the three methods you need to handle the album data.</p>
+<p>Open <em>PersistencyManager.m</em> and add the following code right above the <code>@implementation</code> line:</p>
+<pre><code>@interface PersistencyManager () {
+    // an array of all albums
+    NSMutableArray *albums;
+}
+</code></pre><p>The above adds a class extension, which is another way to add private methods and variables to a class so that external classes will not know about them. Here, you declare an <code>NSMutableArray</code> to hold the album data. The array’s mutable so that you can easily add and delete albums.</p>
+<p>Now add the following code implementation to <em>PersistencyManager.m</em> after the <code>@implementation</code> line:</p>
+<pre><code>- (id)init
+{
+    self = [super init];
+    if (self) {
+        // a dummy list of albums
+        albums = [NSMutableArray arrayWithArray:
+                 @[[[Album alloc] initWithTitle:@&quot;Best of Bowie&quot; artist:@&quot;David Bowie&quot; coverUrl:@&quot;http://www.coversproject.com/static/thumbs/album/album_david%20bowie_best%20of%20bowie.png&quot; year:@&quot;1992&quot;],
+                 [[Album alloc] initWithTitle:@&quot;It&apos;s My Life&quot; artist:@&quot;No Doubt&quot; coverUrl:@&quot;http://www.coversproject.com/static/thumbs/album/album_no%20doubt_its%20my%20life%20%20bathwater.png&quot; year:@&quot;2003&quot;],
+                 [[Album alloc] initWithTitle:@&quot;Nothing Like The Sun&quot; artist:@&quot;Sting&quot; coverUrl:@&quot;http://www.coversproject.com/static/thumbs/album/album_sting_nothing%20like%20the%20sun.png&quot; year:@&quot;1999&quot;],
+                 [[Album alloc] initWithTitle:@&quot;Staring at the Sun&quot; artist:@&quot;U2&quot; coverUrl:@&quot;http://www.coversproject.com/static/thumbs/album/album_u2_staring%20at%20the%20sun.png&quot; year:@&quot;2000&quot;],
+                 [[Album alloc] initWithTitle:@&quot;American Pie&quot; artist:@&quot;Madonna&quot; coverUrl:@&quot;http://www.coversproject.com/static/thumbs/album/album_madonna_american%20pie.png&quot; year:@&quot;2000&quot;]]];
+    }
+    return self;
+}
+</code></pre><p>In <code>init</code> you populate the array with five sample albums. If the above albums aren’t to your liking, feel free to replace them with the music you enjoy. :]</p>
+<p>Now add the following three methods to <em>PersistencyManager.m</em>:</p>
+<pre><code>- (NSArray*)getAlbums
+{
+    return albums;
+}
+
+- (void)addAlbum:(Album*)album atIndex:(int)index
+{
+    if (albums.count &gt;= index)
+        [albums insertObject:album atIndex:index];
+    else
+        [albums addObject:album];
+}
+
+- (void)deleteAlbumAtIndex:(int)index
+{
+    [albums removeObjectAtIndex:index];
+}
+</code></pre><p>These methods allow you to get, add, and delete albums. </p>
+<p>Build your project just to make sure everything still compiles correctly. </p>
+<p>At this point, you might wonder where the <code>PersistencyManager</code> class comes in since it’s not a Singleton. The relationship between <code>LibraryAPI</code> and <code>PersistencyManager</code> will be further explored in the next section where you’ll look at the <em>Facade</em> design pattern.</p>
+<h2 id="The-Facade-Design-Pattern"><a href="#The-Facade-Design-Pattern" class="headerlink" title="The Facade Design Pattern"></a>The Facade Design Pattern</h2><p><img src="https://koenig-media.raywenderlich.com/uploads/2013/07/facade.jpg" alt="facade"></p>
+<p>The Facade design pattern provides a single interface to a complex subsystem. Instead of exposing the user to a set of classes and their APIs, you only expose one simple unified API.</p>
+<p>The following image explains this concept:</p>
+<p><img src="https://koenig-media.raywenderlich.com/uploads/2013/07/facade2-480x241.png" alt="facade2"></p>
+<p>The user of the API is completely unaware of the complexity that lies beneath. This pattern is ideal when working with a large number of classes, particularly when they are complicated to use or difficult to understand.</p>
+<p>The Facade pattern decouples the code that uses the system from the interface and implementation of the classes you’re hiding; it also reduces dependencies of outside code on the inner workings of your subsystem. This is also useful if the classes under the facade are likely to change, as the facade class can retain the same API while things change behind the scenes.<br>For example, if the day comes when you want to replace your backend service, you won’t have to change the code that uses your API as it wont’ change.</p>
+<h2 id="How-to-Use-the-Facade-Pattern"><a href="#How-to-Use-the-Facade-Pattern" class="headerlink" title="How to Use the Facade Pattern"></a>How to Use the Facade Pattern</h2><p>Currently you have <code>PersistencyManager</code> to save the album data locally and <code>HTTPClient</code> to handle the remote communication. The other classes in your project should not be aware of this logic. </p>
+<p>To implement this pattern, only <code>LibraryAPI</code> should hold instances of <code>PersistencyManager</code> and <code>HTTPClient</code>. Then, <code>LibraryAPI</code> will expose a simple API to access those services. </p>
+<p><em>Note:</em> Usually, a singleton exists for the lifetime of the app. You shouldn’t keep too many strong pointers in the singleton to other objects, since they won’t be released until the app is closed.</p>
+<p>The design looks like the following:</p>
+<p><img src="https://koenig-media.raywenderlich.com/uploads/2013/08/design-patterns-facade-uml-480x71.png" alt="design-patterns-facade-uml"></p>
+<p>LibraryAPI will be exposed to other code, but will hide the <code>HTTPClient</code> and <code>PersistencyManager</code> complexity from the rest of the app.</p>
+<p>Open <em>LibraryAPI.h</em> and add the following import to the top of the file:</p>
+<pre><code>#import &quot;Album.h&quot;
+</code></pre><p>Next, add the following method definitions to <em>LibraryAPI.h</em>:</p>
+<pre><code>- (NSArray*)getAlbums;
+- (void)addAlbum:(Album*)album atIndex:(int)index;
+- (void)deleteAlbumAtIndex:(int)index;
+</code></pre><p>For now, these are the methods you’ll expose to the other classes. </p>
+<p>Go to <em>LibraryAPI.m</em> and add the following two imports:</p>
+<pre><code>#import &quot;PersistencyManager.h&quot;
+#import &quot;HTTPClient.h&quot;
+</code></pre><p>This will be the only place where you import these classes. Remember: your API will be the only access point to your “complex” system. </p>
+<p>Now, add some private variables via a class extension (above the <code>@implementation</code> line):</p>
+<pre><code>@interface LibraryAPI () {
+    PersistencyManager *persistencyManager;
+    HTTPClient *httpClient;
+    BOOL isOnline;
+}
+
+@end
+</code></pre><p><code>isOnline</code> determines if the server should be updated with any changes made to the albums list, such as added or deleted albums.</p>
+<p>You now need to initialize these variables via <code>init</code>. Add the following code to <em>LibraryAPI.m</em>:</p>
+<pre><code>- (id)init
+{
+    self = [super init];
+    if (self) {
+        persistencyManager = [[PersistencyManager alloc] init];
+        httpClient = [[HTTPClient alloc] init];
+        isOnline = NO;
+    }
+    return self;
+}
+</code></pre><p>The HTTP client doesn’t actually work with a real server and is only here to demonstrate the usage of the facade pattern, so <code>isOnline</code> will always be <code>NO</code>.</p>
+<p>Next, add the following three methods to <em>LibraryAPI.m</em>:</p>
+<pre><code>- (NSArray*)getAlbums
+{
+    return [persistencyManager getAlbums];
+}
+
+- (void)addAlbum:(Album*)album atIndex:(int)index
+{
+    [persistencyManager addAlbum:album atIndex:index];
+    if (isOnline)
+    {
+        [httpClient postRequest:@&quot;/api/addAlbum&quot; body:[album description]];
+    }
+}
+
+- (void)deleteAlbumAtIndex:(int)index
+{
+    [persistencyManager deleteAlbumAtIndex:index];
+    if (isOnline)
+    {
+        [httpClient postRequest:@&quot;/api/deleteAlbum&quot; body:[@(index) description]];
+    }
+}
+</code></pre><p>Take a look at <code>addAlbum:atIndex:</code>. The class first updates the data locally, and then if there’s an internet connection, it updates the remote server. This is the real strength of the Facade; when some class outside of your system adds a new album, it doesn’t know — and doesn’t need to know — of the complexity that lies underneath.</p>
+<p><em>Note:</em> When designing a Facade for classes in your subsystem, remember that nothing prevents the client from accessing these “hidden” classes directly. Don’t be stingy with defensive code and don’t assume that all the clients will necessarily use your classes the same way the Facade uses them.</p>
+<p>Build and run your app. You’ll see an incredibly exciting empty black screen like this:</p>
+<p><img src="https://koenig-media.raywenderlich.com/uploads/2013/09/2013-09-01_12-08-44-211x320.png" alt="Blank screen"></p>
+<p>You’ll need something to display the album data on screen — which is a perfect use for your next design pattern: the <em>Decorator</em>.</p>
+<h2 id="The-Decorator-Design-Pattern"><a href="#The-Decorator-Design-Pattern" class="headerlink" title="The Decorator Design Pattern"></a>The Decorator Design Pattern</h2><p>The Decorator pattern dynamically adds behaviors and responsibilities to an object without modifying its code. It’s an alternative to subclassing where you modify a class’ behavior by wrapping it with another object.</p>
+<p>In Objective-C there are two <em>very</em> common implementations of this pattern: <em>Category</em> and <em>Delegation</em>.</p>
+<h3 id="Category"><a href="#Category" class="headerlink" title="Category"></a>Category</h3><p>Category is an extremely powerful mechanism that allows you to add methods to existing classes without subclassing. The new methods are added at compile time and can be executed like normal methods of the extended class. It’s slightly different from the classic definition of a decorator, because a Category doesn’t hold an instance of the class it extends.</p>
+<p><em>Note:</em> Besides extending your own classes, you can also add methods to any of Cocoa’s own classes!</p>
+<h3 id="How-to-Use-Categories"><a href="#How-to-Use-Categories" class="headerlink" title="How to Use Categories"></a>How to Use Categories</h3><p>Imagine a situation in which you have an <code>Album</code> object that you want to present inside a table view:</p>
+<p><img src="https://koenig-media.raywenderlich.com/uploads/2013/08/design-patterns-category1.png" alt="design-patterns-category1"></p>
+<p>Where will the album titles come from? <code>Album</code> is a Model object, so it doesn’t care how you present the data. You’ll need some external code to add this functionality to the <code>Album</code> class, but without modifying the class directly.</p>
+<p>You’ll create a category that is an extension of <code>Album</code>; it will define a new method that returns a data structure which can be used easily with <code>UITableView</code>s. </p>
+<p>The data structure will look like the following:</p>
+<p><img src="https://koenig-media.raywenderlich.com/uploads/2013/08/delegate2-480x67.png" alt="delegate2"></p>
+<p>To add a Category to <code>Album</code>, navigate to <em>FileNewFile…</em> and select the <em>Objective-C category</em> template — don’t select the <em>Objective-C class</em> out of habit! Enter <code>TableRepresentation</code> in the <em>Category</em> field and <code>Album</code> in the <em>Category on</em> field.</p>
+<p><em>Note:</em> Did you notice the name of the new file? <code>Album+TableRepresentation</code> means you’re extending the <code>Album</code> class. This convention is important, because it’s easier to read and it prevents a collision with other categories you or someone else might create.</p>
+<p>Go to <em>Album+TableRepresentation.h</em> and add the following method prototype:</p>
+<pre><code>- (NSDictionary*)tr_tableRepresentation;
+</code></pre><p>Notice there’s a <code>tr_</code> at the beginning of the method name, as an abbreviation of the name of the category: TableRepresentation. Again, conventions like this will help prevent collisions with other methods!</p>
+<p><em>Note:</em> If the name of a method declared in a category is the same as a method in the original class, or the same as a method in another category on the same class (or even a superclass), the behavior is <em>undefined</em> as to which method implementation is used at runtime. This is less likely to be an issue if you’re using categories with your own classes, but can cause serious problems when using categories to add methods to standard Cocoa or Cocoa Touch classes.</p>
+<p>Go to <em>Album+TableRepresentation.m</em> and add the following method:</p>
+<pre><code>- (NSDictionary*)tr_tableRepresentation
+{
+    return @{@&quot;titles&quot;:@[@&quot;Artist&quot;, @&quot;Album&quot;, @&quot;Genre&quot;, @&quot;Year&quot;],
+             @&quot;values&quot;:@[self.artist, self.title, self.genre, self.year]};
+}
+</code></pre><p>Consider for a moment how powerful this pattern can be:</p>
+<ul>
+<li>You’re using properties directly from <code>Album</code>.</li>
+<li>You have added to the <code>Album</code> class but you haven’t subclassed it. If you need to sub-class <code>Album</code>, you can still do that too.</li>
+<li>This simple addition lets you return a <code>UITableView</code>–<em>ish</em> representation of an <code>Album</code>, without modifying <code>Album</code>‘s code.</li>
+</ul>
+<p>Apple uses Categories a lot in the Foundation classes. To see how they do this, open <em>NSString.h</em>. Find <code>@interface NSString</code>, and you’ll see the definition of the class together with three categories: <code>NSStringExtensionMethods</code>, <code>NSExtendedStringPropertyListParsing</code> and <code>NSStringDeprecated</code>. Categories help keep the methods organized and separated into sections.</p>
+<h3 id="Delegation"><a href="#Delegation" class="headerlink" title="Delegation"></a>Delegation</h3><p>The other Decorator design pattern, Delegation, is a mechanism in which one object acts on behalf of, or in coordination with, another object. For example, when you use a <code>UITableView</code>, one of the methods you must implement is <code>tableView:numberOfRowsInSection:</code>. </p>
+<p>You can’t expect the <code>UITableView</code> to know how many rows you want to have in each section, as this is application-specific. Therefore, the task of calculating the amount of rows in each section is passed on to the <code>UITableView</code> delegate. This allows the <code>UITableView</code> class to be independent of the data it displays.</p>
+<p>Here’s a pseudo-explanation of what’s going on when you create a new <code>UITableView</code>:</p>
+<p><img src="https://koenig-media.raywenderlich.com/uploads/2013/08/delegate-480x252.png" alt="delegate"></p>
+<p>The <code>UITableView</code> object does its job of displaying a table view. However, eventually it will need some information that it doesn’t have. Then, it turns to its delegates and sends a message asking for additional information. In Objective-C’s implementation of the delegate pattern, a class can declare optional and required methods through a protocol. You’ll cover protocols a bit later in this tutorial.</p>
+<p>It might seem easier to just subclass an object and override the necessary methods, but consider that you can only subclass based on a single class. If you want an object to be the delegate of two or more other objects, you won’t be able to achieve this by subclassing.</p>
+<p><em>Note:</em> This is an important pattern. Apple uses this approach in most of the UIKit classes: <code>UITableView</code>, <code>UITextView</code>, <code>UITextField</code>, <code>UIWebView</code>, <code>UIAlert</code>, <code>UIActionSheet</code>, <code>UICollectionView</code>, <code>UIPickerView</code>, <code>UIGestureRecognizer</code>, <code>UIScrollView</code>. The list goes on and on.</p>
+<h3 id="How-to-Use-the-Delegate-Pattern"><a href="#How-to-Use-the-Delegate-Pattern" class="headerlink" title="How to Use the Delegate Pattern"></a>How to Use the Delegate Pattern</h3><p>Go to <em>ViewController.m</em> and add the following imports to the top of the file:</p>
+<pre><code>#import &quot;LibraryAPI.h&quot;
+#import &quot;Album+TableRepresentation.h&quot;
+</code></pre><p>Now, add these private variables to the class extension so that the class extension looks like this:</p>
+<pre><code>@interface ViewController () {
+    UITableView *dataTable;
+    NSArray *allAlbums;
+    NSDictionary *currentAlbumData;
+    int currentAlbumIndex;
+}
+
+@end
+</code></pre><p>Then, replace the <code>@interface</code> line in the class extension with this one:</p>
+<pre><code>@interface ViewController ()  {
+</code></pre><p>This is how you make your delegate conform to a protocol — think of it as a promise made by the delegate to fulfil the method’s contract. Here, you indicate that <code>ViewController</code> will conform to the <code>UITableViewDataSource</code> and <code>UITableViewDelegate</code> protocols. This way <code>UITableView</code> can be absolutely certain that the required methods are implemented by its delegate.</p>
+<p>Next, replace <code>viewDidLoad:</code> with this code:</p>
+<pre><code>- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    // 1
+    self.view.backgroundColor = [UIColor colorWithRed:0.76f green:0.81f blue:0.87f alpha:1];
+    currentAlbumIndex = 0;
+
+    //2
+    allAlbums = [[LibraryAPI sharedInstance] getAlbums];
+
+    // 3
+    // the uitableview that presents the album data
+    dataTable = [[UITableView alloc] initWithFrame:CGRectMake(0, 120, self.view.frame.size.width, self.view.frame.size.height-120) style:UITableViewStyleGrouped];
+    dataTable.delegate = self;
+    dataTable.dataSource = self;
+    dataTable.backgroundView = nil;
+    [self.view addSubview:dataTable];
+}
+</code></pre><p>Here’s a breakdown of the above code:</p>
+<ol>
+<li>Change the background color to a nice navy blue color.</li>
+<li>Get a list of all the albums via the API. You don’t use <code>PersistencyManager</code> directly!</li>
+<li>This is where you create the <code>UITableView</code>. You declare that the view controller is the <code>UITableView</code> delegate/data source; therefore, all the information required by <code>UITableView</code> will be provided by the view controller.</li>
+</ol>
+<p>Now, add the following method to <em>ViewController.m</em>:</p>
+<pre><code>- (void)showDataForAlbumAtIndex:(int)albumIndex
+{
+    // defensive code: make sure the requested index is lower than the amount of albums
+    if (albumIndex &lt; allAlbums.count)
+    {
+        // fetch the album
+        Album *album = allAlbums[albumIndex];
+        // save the albums data to present it later in the tableview
+        currentAlbumData = [album tr_tableRepresentation];
+    }
+    else
+    {
+        currentAlbumData = nil;
+    }
+
+    // we have the data we need, let&apos;s refresh our tableview    
+    [dataTable reloadData];
+}
+</code></pre><p><code>showDataForAlbumAtIndex:</code> fetches the required album data from the array of albums. When you want to present the new data, you just need to call <code>reloadData</code>. This causes <code>UITableView</code> to ask its delegate such things as how many sections should appear in the table view, how many rows in each section, and how each cell should look.</p>
+<p>Add the following line to the end of <code>viewDidLoad</code></p>
+<pre><code>[self showDataForAlbumAtIndex:currentAlbumIndex];
+</code></pre><p>This loads the current album at app launch. And since <code>currentAlbumIndex</code> was previously set to 0, this shows the first album in the collection.</p>
+<p>Build and run your project; you’ll experience a crash with the following exception displayed in the debug console:</p>
+<p><img src="https://koenig-media.raywenderlich.com/uploads/2013/09/2013-09-01_15-57-32-700x112.png" alt="UITableView Crash"></p>
+<p>What’s going on here? You declared that <code>ViewController</code> as the <code>UITableView</code>‘s delegate and data source. But in doing so, you <em>must</em> conform to all the required methods — including <code>tableView:numberOfRowsInSection:</code> — which you haven’t done yet.</p>
+<p>Add the following code to <em>ViewController.m</em> anywhere between the <code>@implementation</code> and <code>@end</code> lines:</p>
+<pre><code>- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [currentAlbumData[@&quot;titles&quot;] count];
+}
+
+- (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@&quot;cell&quot;];
+    if (!cell)
+    {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@&quot;cell&quot;];
+    }
+
+    cell.textLabel.text = currentAlbumData[@&quot;titles&quot;][indexPath.row];
+    cell.detailTextLabel.text = currentAlbumData[@&quot;values&quot;][indexPath.row];
+
+    return cell;
+}
+</code></pre><p><code>tableView:numberOfRowsInSection:</code> returns the number of rows to display in the table view, which matches the number of titles in the data structure. </p>
+<p><code>tableView:cellForRowAtIndexPath:</code> creates and returns a cell with the title and its value.</p>
+<p>Build and run your project. Your app should start and present you with the following screen:</p>
+<p><img src="https://koenig-media.raywenderlich.com/uploads/2013/08/design-pattern-stage1.png" alt="design pattern - stage1"></p>
+<p>Things are looking pretty good so far. But if you recall the first image showing the finished app, there was a horizontal scroller at the top of the screen to switch between albums. Instead of coding a single-purpose horizontal scroller, why not make it reusable for any view?</p>
+<p>To make this view reusable, all decisions about its content should be left to another object: a delegate. The horizontal scroller should declare methods that its delegate implements in order to work with the scroller, similar to how the <code>UITableView</code> delegate methods work. We’ll implement this when we discuss the next design pattern.</p>
+<h2 id="The-Adapter-Pattern"><a href="#The-Adapter-Pattern" class="headerlink" title="The Adapter Pattern"></a>The Adapter Pattern</h2><p>An Adapter allows classes with incompatible interfaces to work together. It wraps itself around an object and exposes a standard interface to interact with that object.</p>
+<p>If you’re familiar with the Adapter pattern then you’ll notice that Apple implements it in a slightly different manner - Apple uses protocols to do the job. You may be familiar with protocols like <code>UITableViewDelegate</code>, <code>UIScrollViewDelegate</code>, <code>NSCoding</code> and <code>NSCopying</code>. As an example, with the <code>NSCopying</code> protocol, any class can provide a standard <code>copy</code> method.</p>
+<h2 id="How-to-Use-the-Adapter-Pattern"><a href="#How-to-Use-the-Adapter-Pattern" class="headerlink" title="How to Use the Adapter Pattern"></a>How to Use the Adapter Pattern</h2><p>The horizontal scroller mentioned before will look like this:</p>
+<p><img src="https://koenig-media.raywenderlich.com/uploads/2013/08/protocol1.png" alt="protocol1"></p>
+<p>To begin implementing it, right click on the View group in the Project Navigator, select <em>New File…</em> and create a class with the <em>iOSCocoa TouchObjective-C class</em> template. Name the new class <em>HorizontalScroller</em> and make it subclass from <code>UIView</code>.</p>
+<p>Open <em>HorizontalScroller.h</em> and insert the following code <em>after</em> the <code>@end</code> line:</p>
+<pre><code>@protocol HorizontalScrollerDelegate 
+// methods declaration goes in here
+@end
+</code></pre><p>This defines a protocol named <code>HorizontalScrollerDelegate</code> that inherits from the <code>NSObject</code> protocol in the same way that an Objective-C class inherits from its parent. It’s good practice to conform to the <code>NSObject</code> protocol — or to conform to a protocol that itself conforms to the <code>NSObject</code> protocol. This lets you send messages defined by <code>NSObject</code> to the delegate of <code>HorizontalScroller</code>. You’ll soon see why this is important.</p>
+<p>You define the required and optional methods that the delegate will implement between the <code>@protocol</code> and <code>@end</code> lines. So add the following protocol methods:</p>
+<pre><code>@required
+// ask the delegate how many views he wants to present inside the horizontal scroller
+- (NSInteger)numberOfViewsForHorizontalScroller:(HorizontalScroller*)scroller;
+
+// ask the delegate to return the view that should appear at 
+- (UIView*)horizontalScroller:(HorizontalScroller*)scroller viewAtIndex:(int)index;
+
+// inform the delegate what the view at  has been clicked
+- (void)horizontalScroller:(HorizontalScroller*)scroller clickedViewAtIndex:(int)index;
+
+@optional
+// ask the delegate for the index of the initial view to display. this method is optional
+// and defaults to 0 if it&apos;s not implemented by the delegate
+- (NSInteger)initialViewIndexForHorizontalScroller:(HorizontalScroller*)scroller;
+</code></pre><p>Here you have both required and optional methods. Required methods must be implemented by the delegate and usually contain some data that is absolutely required by the class. In this case, the required details are the number of views, the view at a specific index, and the behaviour when the view is tapped. The optional method here is the initial view; if it’s not implemented then the <code>HorizontalScroller</code> will default to the first index.</p>
+<p>Next, you’ll need to refer to your new delegate from within the <code>HorizontalScroller</code> class definition. But the protocol definition is below the class definition and so is not <em>visible</em> at this point. What can you do?</p>
+<p>The solution is to forward declare the protocol so that the compiler (and Xcode) knows that such a protocol will be available. To do this, add the following code <em>above</em> the @interface line:</p>
+<pre><code>@protocol HorizontalScrollerDelegate;
+</code></pre><p>Still in <em>HorizontalScroller.h</em>, add the following code between the <code>@interface</code> and <code>@end</code> statements:</p>
+<pre><code>@property (weak) id delegate;
+
+- (void)reload;
+</code></pre><p>The attribute of the property you created above is defined as <code>weak</code>. This is necessary in order to prevent a retain cycle. If a class keeps a <code>strong</code> pointer to its delegate and the delegate keeps a strong pointer back to the conforming class, your app will leak memory since neither class will release the memory allocated to the other.</p>
+<p>The <code>id</code> means that the delegate can only be assigned classes that conform to <code>HorizontalScrollerDelegate</code>, giving you some type safety.</p>
+<p>The <code>reload</code> method is modelled after <code>reloadData</code> in <code>UITableView</code>; it reloads all the data used to construct the horizontal scroller.</p>
+<p>Replace the contents of <em>HorizontalScroller.m</em> with the following code:</p>
+<pre><code>#import &quot;HorizontalScroller.h&quot;
+
+// 1
+#define VIEW_PADDING 10
+#define VIEW_DIMENSIONS 100
+#define VIEWS_OFFSET 100
+
+// 2
+@interface HorizontalScroller () 
+@end
+
+// 3
+@implementation HorizontalScroller
+{
+    UIScrollView *scroller;
+}
+
+@end
+</code></pre><p>Taking each comment block in turn:</p>
+<ol>
+<li>Define constants to make it easy to modify the layout at design time. The view’s dimensions inside the scroller will be 100 x 100 with a 10 point margin from its enclosing rectangle.</li>
+<li><code>HorizontalScroller</code> conforms to the <code>UIScrollViewDelegate</code> protocol. Since <code>HorizontalScroller</code> uses a <code>UIScrollView</code> to scroll the album covers, it needs to know of user events such as when a user stops scrolling.</li>
+<li>Create the scroll view containing the views.</li>
+</ol>
+<p>Next you need to implement the initializer. Add the following method:</p>
+<pre><code>- (id)initWithFrame:(CGRect)frame
+{
+    self = [super initWithFrame:frame];
+    if (self)
+    {
+        scroller = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
+        scroller.delegate = self;
+        [self addSubview:scroller];
+        UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(scrollerTapped:)];
+        [scroller addGestureRecognizer:tapRecognizer];
+    }
+    return self;
+}
+</code></pre><p>The scroll view completely fills the <code>HorizontalScroller</code>. A <code>UITapGestureRecognizer</code> detects touches on the scroll view and checks if an album cover has been tapped. If so, it notifies the <code>HorizontalScroller</code> delegate.</p>
+<p>Now add this mehtod:</p>
+<pre><code>- (void)scrollerTapped:(UITapGestureRecognizer*)gesture
+{
+    CGPoint location = [gesture locationInView:gesture.view];
+    // we can&apos;t use an enumerator here, because we don&apos;t want to enumerate over ALL of the UIScrollView subviews.
+    // we want to enumerate only the subviews that we added
+    for (int index=0; index&lt;[self.delegate numberOfViewsForHorizontalScroller:self]; index++)
+    {
+        UIView *view = scroller.subviews[index];
+        if (CGRectContainsPoint(view.frame, location))
+        {
+            [self.delegate horizontalScroller:self clickedViewAtIndex:index];
+            [scroller setContentOffset:CGPointMake(view.frame.origin.x - self.frame.size.width/2 + view.frame.size.width/2, 0) animated:YES];
+            break;
+        }
+    }
+}
+</code></pre><p>The gesture passed in as a parameter lets you extract the location via <code>locationInView:</code>.</p>
+<p>Next, you invoke <code>numberOfViewsForHorizontalScroller:</code> on the delegate. The <code>HorizontalScroller</code> instance has no information about the delegate other than knowing it can safely send this message since the delegate must conform to the <code>HorizontalScrollerDelegate</code> protocol.</p>
+<p>For each view in the scroll view, perform a hit test using <code>CGRectContainsPoint</code> to find the view that was tapped. When the view is found, send the delegate the <code>horizontalScroller:clickedViewAtIndex:</code> message. Before you break out of the for loop, center the tapped view in the scroll view.</p>
+<p>Now add the following code to reload the scroller:</p>
+<pre><code>- (void)reload
+{
+    // 1 - nothing to load if there&apos;s no delegate
+    if (self.delegate == nil) return;
+
+    // 2 - remove all subviews
+    [scroller.subviews enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        [obj removeFromSuperview];
+    }];
+
+    // 3 - xValue is the starting point of the views inside the scroller
+    CGFloat xValue = VIEWS_OFFSET;
+    for (int i=0; i&lt;[self.delegate numberOfViewsForHorizontalScroller:self]; i++)
+    {
+        // 4 - add a view at the right position
+        xValue += VIEW_PADDING;
+        UIView *view = [self.delegate horizontalScroller:self viewAtIndex:i];
+        view.frame = CGRectMake(xValue, VIEW_PADDING, VIEW_DIMENSIONS, VIEW_DIMENSIONS);
+        [scroller addSubview:view];
+        xValue += VIEW_DIMENSIONS+VIEW_PADDING;
+    }
+
+    // 5
+    [scroller setContentSize:CGSizeMake(xValue+VIEWS_OFFSET, self.frame.size.height)];
+
+    // 6 - if an initial view is defined, center the scroller on it
+    if ([self.delegate respondsToSelector:@selector(initialViewIndexForHorizontalScroller:)])
+    {
+        int initialView = [self.delegate initialViewIndexForHorizontalScroller:self];
+        [scroller setContentOffset:CGPointMake(initialView*(VIEW_DIMENSIONS+(2*VIEW_PADDING)), 0) animated:YES];
+    }
+}
+</code></pre><p>Stepping through the code comment-by-comment:</p>
+<ol>
+<li>If there’s no delegate, then there’s nothing to be done and you can return.</li>
+<li>Remove all the subviews previously added to the scroll view.</li>
+<li>All the views are positioned starting from the given offset. Currently it’s 100, but it can be easily tweaked by changing the <code>#DEFINE</code> at the top of the file.</li>
+<li>The <code>HorizontalScroller</code> asks its delegate for the views one at a time and it lays them next to each another horizontally with the previously defined padding.</li>
+<li>Once all the views are in place, set the content offset for the scroll view to allow the user to scroll through all the albums covers.</li>
+<li>The <code>HorizontalScroller</code> checks if its delegate responds to the <code>initialViewIndexForHorizontalScroller:</code> selector. This check is necessary because that particular protocol method is optional. If the delegate doesn’t implement this method, 0 is used as the default value. Finally, this piece of code sets the scroll view to center the initial view defined by the delegate.</li>
+</ol>
+<p>You execute <code>reload</code> when your data has changed. You also need to call this method when you add <code>HorizontalScroller</code> to another view. Add the following code to <em>HorizontalScroller.m</em> to cover the latter scenario:</p>
+<pre><code>- (void)didMoveToSuperview
+{
+    [self reload];
+}
+</code></pre><p>The <code>didMoveToSuperview</code> message is sent to a view when it’s added to another view as a subview. This is the right time to reload the contents of the scroller.</p>
+<p>The last piece of the <code>HorizontalScroller</code> puzzle is to make sure the album you’re viewing is always centered inside the scroll view. To do this, you’ll need to perform some calculations when the user drags the scroll view with their finger. </p>
+<p>Add the following method (again to <em>HorizontalScroller.m</em>):</p>
+<pre><code>- (void)centerCurrentView
+{
+    int xFinal = scroller.contentOffset.x + (VIEWS_OFFSET/2) + VIEW_PADDING;
+    int viewIndex = xFinal / (VIEW_DIMENSIONS+(2*VIEW_PADDING));
+    xFinal = viewIndex * (VIEW_DIMENSIONS+(2*VIEW_PADDING));
+    [scroller setContentOffset:CGPointMake(xFinal,0) animated:YES];
+    [self.delegate horizontalScroller:self clickedViewAtIndex:viewIndex];
+}
+</code></pre><p>The above code takes into account the current offset of the scroll view and the dimensions and the padding of the views in order to calculate the distance of the current view from the center. The last line is important: once the view is centered, you then inform the delegate that the selected view has changed.</p>
+<p>To detect that the user finished dragging inside the scroll view, you must add the following <code>UIScrollViewDelegate</code> methods:</p>
+<pre><code>- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+{
+    if (!decelerate)
+    {
+        [self centerCurrentView];
+    }
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    [self centerCurrentView];
+}
+</code></pre><p><code>scrollViewDidEndDragging:willDecelerate:</code> informs the delegate when the user finishes dragging. The <code>decelerate</code> parameter is true if the scroll view hasn’t come to a complete stop yet. When the scroll action ends, the the system calls <code>scrollViewDidEndDecelerating</code>. In both cases we should call the new method to center the current view since the current view probably has changed after the user dragged the scroll view.</p>
+<p>Your <code>HorizontalScroller</code> is ready for use! Browse through the code you’ve just written; you’ll see there’s not one single mention of the <code>Album</code> or <code>AlbumView</code> classes. That’s excellent, because this means that the new scroller is truly independent and reusable.</p>
+<p>Build your project to make sure everything compiles properly.</p>
+<p>Now that <code>HorizontalScroller</code> is complete, it’s time to use it in your app. Open <em>ViewController.m</em> and add the following imports:</p>
+<pre><code>#import &quot;HorizontalScroller.h&quot;
+#import &quot;AlbumView.h&quot;
+</code></pre><p>Add <code>HorizontalScrollerDelegate</code> to the protocols that <code>ViewController</code> conforms to:</p>
+<pre><code>@interface ViewController ()
+</code></pre><p>Add the following instance variable for the Horizontal Scroller to the class extension:</p>
+<pre><code>HorizontalScroller *scroller;
+</code></pre><p>Now you can implement the delegate methods; you’ll be amazed at how just a few lines of code can implement a lot of functionality.</p>
+<p>Add the following code to <em>ViewController.m</em>:</p>
+<pre><code>#pragma mark - HorizontalScrollerDelegate methods
+- (void)horizontalScroller:(HorizontalScroller *)scroller clickedViewAtIndex:(int)index
+{
+    currentAlbumIndex = index;
+    [self showDataForAlbumAtIndex:index];
+}
+</code></pre><p>This sets the variable that stores the current album and then calls <code>showDataForAlbumAtIndex:</code> to display the data for the new album.</p>
+<p><em>Note:</em> It’s common practice to place methods that fit together after a <code>#pragma mark</code> directive. The compiler will ignore this line but if you drop down the list of methods in your current file via Xcode’s jump bar, you’ll see a separator and a bold title for the directive. This helps you organize your code for easy navigation in Xcode.</p>
+<p>Next, add the following code:</p>
+<pre><code>- (NSInteger)numberOfViewsForHorizontalScroller:(HorizontalScroller*)scroller
+{
+    return allAlbums.count;
+}
+</code></pre><p>This, as you’ll recognize, is the protocol method returning the number of views for the scroll view. Since the scroll view will display covers for all the album data, the count is the number of album records.</p>
+<p>Now, add this code:</p>
+<pre><code>- (UIView*)horizontalScroller:(HorizontalScroller*)scroller viewAtIndex:(int)index
+{
+    Album *album = allAlbums[index];
+    return [[AlbumView alloc] initWithFrame:CGRectMake(0, 0, 100, 100) albumCover:album.coverUrl];
+}
+</code></pre><p>Here you create a new <code>AlbumView</code> and pass it to the <code>HorizontalScroller</code>.</p>
+<p>That’s it! Only three short methods to display a nice looking horizontal scroller.</p>
+<p>Yes, you still need to actually create the scroller and add it to your main view but before doing that, add the following method:</p>
+<pre><code>- (void)reloadScroller
+{
+    allAlbums = [[LibraryAPI sharedInstance] getAlbums];
+    if (currentAlbumIndex &lt; 0) currentAlbumIndex = 0;
+    else if (currentAlbumIndex &gt;= allAlbums.count) currentAlbumIndex = allAlbums.count-1;
+    [scroller reload];
+
+    [self showDataForAlbumAtIndex:currentAlbumIndex];
+}
+</code></pre><p>This method loads album data via <code>LibraryAPI</code> and then sets the currently displayed view based on the current value of the current view index. If the current view index is less than 0, meaning that no view was currently selected, then the first album in the list is displayed. Otherwise, the last album is displayed.</p>
+<p>Now, initialize the scroller by adding the following code to <code>viewDidLoad</code> before[<code>self showDataForAlbumAtIndex:0];</code>:</p>
+<pre><code>scroller = [[HorizontalScroller alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 120)];
+scroller.backgroundColor = [UIColor colorWithRed:0.24f green:0.35f blue:0.49f alpha:1];
+scroller.delegate = self;
+[self.view addSubview:scroller];
+
+[self reloadScroller];
+</code></pre><p>The above simply creates a new instance of <code>HorizontalScroller</code>, sets its background color and delegate, adds the scroller to the main view, and then loads the subviews for the scroller to display album data.</p>
+<p><em>Note:</em> If a protocol becomes too big and is packed with a lot of methods, you should consider breaking it into several smaller protocols. <code>UITableViewDelegate</code> and <code>UITableViewDataSource</code> are a good example, since they are both protocols of <code>UITableView</code>. Try to design your protocols so that each one handles one specific area of functionality.</p>
+<p>Build and run your project and take a look at your awesome new horizontal scroller:</p>
+<p><img src="https://koenig-media.raywenderlich.com/uploads/2013/08/design-patterns-3-298x320.png" alt="design-patterns-3"></p>
+<p>Uh, wait. The horizontal scroller is in place, but where are the covers? </p>
+<p>Ah, that’s right — you didn’t implement the code to download the covers yet. To do that, you’ll need to add a way to download images. Since all your access to services goes through <code>LibraryAPI</code>, that’s where this new method would have to go. However, there are a few things to consider first:</p>
+<ol>
+<li><code>AlbumView</code> shouldn’t work directly with <code>LibraryAPI</code>. You don’t want to mix view logic with communication logic.</li>
+<li>For the same reason, <code>LibraryAPI</code> shouldn’t know about <code>AlbumView</code>.</li>
+<li><code>LibraryAPI</code> needs to inform <code>AlbumView</code> once the covers are downloaded since the <code>AlbumView</code> has to display the covers.</li>
+</ol>
+<p>Sounds like a conundrum? Don’t despair, you’ll learn how to do this using the <em>Observer</em> pattern :]</p>
+<h2 id="The-Observer-Pattern"><a href="#The-Observer-Pattern" class="headerlink" title="The Observer Pattern"></a>The Observer Pattern</h2><p>In the Observer pattern, one object notifies other objects of any state changes. The objects involved don’t need to know about one another - thus encouraging a decoupled design. This pattern’s most often used to notify interested objects when a property has changed.</p>
+<p>The usual implementation requires that an observer registers interest in the state of another object. When the state changes, all the observing objects are notified of the change. Apple’s Push Notification service is a global example of this.</p>
+<p>If you want to stick to the MVC concept (hint: you do), you need to allow Model objects to communicate with View objects, but without direct references between them. And that’s where the Observer pattern comes in.</p>
+<p>Cocoa implements the observer pattern in two familiar ways: <em>Notifications</em> and <em>Key-Value Observing (KVO)</em>.</p>
+<h3 id="Notifications"><a href="#Notifications" class="headerlink" title="Notifications"></a>Notifications</h3><p>Not be be confused with Push or Local notifications, Notifications are based on a subscribe-and-publish model that allows an object (the publisher) to send messages to other objects (subscribers/listeners). The publisher never needs to know anything about the subscribers.<br>Notifications are heavily used by Apple. For example, when the keyboard is shown/hidden the system sends a <code>UIKeyboardWillShowNotification</code>/<code>UIKeyboardWillHideNotification</code>, respectively. When your app goes to the background, the system sends a <code>UIApplicationDidEnterBackgroundNotification</code> notification.</p>
+<p><em>Note:</em> Open up <em>UIApplication.h</em>, at the end of the file you’ll see a list of over 20 notifications sent by the system.</p>
+<h3 id="How-to-Use-Notifications"><a href="#How-to-Use-Notifications" class="headerlink" title="How to Use Notifications"></a>How to Use Notifications</h3><p>Go to <em>AlbumView.m</em> and insert the following code after [<code>self addSubview:indicator];</code> in <code>initWithFrame:albumCover:</code>:</p>
+<pre><code>[[NSNotificationCenter defaultCenter] postNotificationName:@&quot;BLDownloadImageNotification&quot;
+                                                    object:self
+                                                  userInfo:@{@&quot;imageView&quot;:coverImage, @&quot;coverUrl&quot;:albumCover}];
+</code></pre><p>This line sends a notification through the <code>NSNotificationCenter</code> singleton. The notification info contains the <code>UIImageView</code> to populate and the URL of the cover image to be downloaded. That’s all the information you need to perform the cover download task.</p>
+<p>Add the following line to <code>init</code> in <em>LibraryAPI.m</em>, directly after <code>isOnline = NO</code>:</p>
+<pre><code>[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(downloadImage:) name:@&quot;BLDownloadImageNotification&quot; object:nil];
+</code></pre><p>This is the other side of the equation: the observer. Every time an <code>AlbumView</code> class posts a <code>BLDownloadImageNotification</code> notification, since <code>LibraryAPI</code> has registered as an observer for the same notification, the system notifies <code>LibraryAPI</code>. And <code>LibraryAPI</code> executes <em>downloadImage:</em> in response. </p>
+<p>However, before you implement <em>downloadImage:</em> you must remember to unsubscribe from this notification when your class is deallocated. If you do not properly unsubscribe from a notification your class registered for, a notification might be sent to a deallocated instance. This can result in application crashes.</p>
+<p>Add the following method to <em>LibraryAPI.m</em>:</p>
+<pre><code>- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+</code></pre><p>When this class is deallocated, it removes itself as an observer from all notifications it had registered for.</p>
+<p>There’s one more thing to do. It would probably be a good idea to save the downloaded covers locally so the app won’t need to download the same covers over and over again.</p>
+<p>Open <em>PersistencyManager.h</em> and add the following two method prototypes:</p>
+<pre><code>- (void)saveImage:(UIImage*)image filename:(NSString*)filename;
+- (UIImage*)getImage:(NSString*)filename;
+</code></pre><p>And the method implementations to <em>PersistencyManager.m</em>:</p>
+<pre><code>- (void)saveImage:(UIImage*)image filename:(NSString*)filename
+{
+    filename = [NSHomeDirectory() stringByAppendingFormat:@&quot;/Documents/%@&quot;, filename];
+    NSData *data = UIImagePNGRepresentation(image);
+    [data writeToFile:filename atomically:YES];
+}
+
+- (UIImage*)getImage:(NSString*)filename
+{
+    filename = [NSHomeDirectory() stringByAppendingFormat:@&quot;/Documents/%@&quot;, filename];
+    NSData *data = [NSData dataWithContentsOfFile:filename];
+    return [UIImage imageWithData:data];
+}
+</code></pre><p>This code is pretty straightforward. The downloaded images will be saved in the Documents directory, and <code>getImage:</code> will return <code>nil</code> if a matching file is not found in the Documents directory.</p>
+<p>Now add the following method to <em>LibraryAPI.m</em>:</p>
+<pre><code>- (void)downloadImage:(NSNotification*)notification
+{
+    // 1
+    UIImageView *imageView = notification.userInfo[@&quot;imageView&quot;];
+    NSString *coverUrl = notification.userInfo[@&quot;coverUrl&quot;];
+
+    // 2
+    imageView.image = [persistencyManager getImage:[coverUrl lastPathComponent]];
+
+    if (imageView.image == nil)
+    {
+        // 3
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            UIImage *image = [httpClient downloadImage:coverUrl];
+
+            // 4
+            dispatch_sync(dispatch_get_main_queue(), ^{
+                imageView.image = image;
+                [persistencyManager saveImage:image filename:[coverUrl lastPathComponent]];
+            });
+        });
+    }    
+}
+</code></pre><p>Here’s a breakdown of the above code:</p>
+<ol>
+<li><code>downloadImage</code> is executed via notifications and so the method receives the notification object as a parameter. The <code>UIImageView</code> and image URL are retrieved from the notification.</li>
+<li>Retrieve the image from the <code>PersistencyManager</code> if it’s been downloaded previously.</li>
+<li>If the image hasn’t already been downloaded, then retrieve it using <code>HTTPClient</code>.</li>
+<li>When the download is complete, display the image in the image view and use the <code>PersistencyManager</code> to save it locally.</li>
+</ol>
+<p>Again, you’re using the Facade pattern to hide the complexity of downloading an image from the other classes. The notification sender doesn’t care if the image came from the web or from the file system.</p>
+<p>Build and run your app and check out the beautiful covers inside your <code>HorizontalScroller</code>:</p>
+<p><img src="https://koenig-media.raywenderlich.com/uploads/2013/08/design-patterns-4-297x320.png" alt="design-patterns-4"></p>
+<p>Stop your app and run it again. Notice that there’s no delay in loading the covers because they’ve been saved locally. You can even disconnect from the Internet and your app will work flawlessly. However, there’s one odd bit here: the spinner never stops spinning! What’s going on?</p>
+<p>You started the spinner when downloading the image, but you haven’t implemented the logic to stop the spinner once the image is downloaded. You <em>could</em> send out a notification every time an image has been downloaded, but instead, you’ll do that using the other Observer pattern, KVO.</p>
+<h3 id="Key-Value-Observing-KVO"><a href="#Key-Value-Observing-KVO" class="headerlink" title="Key-Value Observing (KVO)"></a>Key-Value Observing (KVO)</h3><p>In KVO, an object can ask to be notified of any changes to a specific property; either its own or that of another object. If you’re interested, you can read more about this on <a href="https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/KeyValueObserving/KeyValueObserving.html" target="_blank" rel="noopener">Apple’s KVO Programming Guide</a>.</p>
+<h3 id="How-to-Use-the-KVO-Pattern"><a href="#How-to-Use-the-KVO-Pattern" class="headerlink" title="How to Use the KVO Pattern"></a>How to Use the KVO Pattern</h3><p>As mentioned above, the KVO mechanism allows an object to observe changes to a property. In your case, you can use KVO to observe changes to the <code>image</code> property of the <code>UIImageView</code> that holds the image.</p>
+<p>Open <em>AlbumView.m</em> and add the following code to <code>initWithFrame:albumCover:</code>, just after the [<code>self addSubview:indicator];</code> line:</p>
+<pre><code>[coverImage addObserver:self forKeyPath:@&quot;image&quot; options:0 context:nil];
+</code></pre><p>This adds <code>self</code>, which is the current class, as an observer for the <code>image</code> property of <code>coverImage</code>. </p>
+<p>You also need to unregister as an observer when you’re done. Still in <em>AlbumView.m</em>, add the following code:</p>
+<pre><code>- (void)dealloc
+{
+    [coverImage removeObserver:self forKeyPath:@&quot;image&quot;];
+}
+</code></pre><p>Finally, add this method:</p>
+<pre><code>- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    if ([keyPath isEqualToString:@&quot;image&quot;])
+    {
+        [indicator stopAnimating];
+    }
+}
+</code></pre><p>You must implement this method in every class acting as an observer. The system executes this method every time the observed property changes. In the above code, you stop the spinner when the “image” property changes. This way, when an image is loaded, the spinner will stop spinning.</p>
+<p>Build and run your project. The spinner should disappear:</p>
+<p><img src="https://koenig-media.raywenderlich.com/uploads/2013/08/design-pattern-stage3-287x320.png" alt="design pattern - stage3"></p>
+<p><em>Note:</em> Always remember to remove your observers when they’re deallocated, or else your app will crash when the subject tries to send messages to these non-existent observers!</p>
+<p>If you play around with your app a bit and terminate it, you’ll notice that the state of your app isn’t saved. The last album you viewed won’t be the default album when the app launches.</p>
+<p>To correct this, you can make use of the next pattern on the list: <em>Memento</em>.</p>
+<h2 id="The-Memento-Pattern"><a href="#The-Memento-Pattern" class="headerlink" title="The Memento Pattern"></a>The Memento Pattern</h2><p>The memento pattern captures and externalizes an object’s internal state. In other words, it saves your stuff somewhere. Later on, this externalized state can be restored without violating encapsulation; that is, private data remains private.</p>
+<h2 id="How-to-Use-the-Memento-Pattern"><a href="#How-to-Use-the-Memento-Pattern" class="headerlink" title="How to Use the Memento Pattern"></a>How to Use the Memento Pattern</h2><p>Add the following two methods to <em>ViewController.m</em>:</p>
+<pre><code>- (void)saveCurrentState
+{
+    // When the user leaves the app and then comes back again, he wants it to be in the exact same state
+    // he left it. In order to do this we need to save the currently displayed album.
+    // Since it&apos;s only one piece of information we can use NSUserDefaults.
+    [[NSUserDefaults standardUserDefaults] setInteger:currentAlbumIndex forKey:@&quot;currentAlbumIndex&quot;];
+}
+
+- (void)loadPreviousState
+{
+    currentAlbumIndex = [[NSUserDefaults standardUserDefaults] integerForKey:@&quot;currentAlbumIndex&quot;];
+    [self showDataForAlbumAtIndex:currentAlbumIndex];
+}
+</code></pre><p><code>saveCurrentState</code> saves the current album index to <code>NSUserDefaults</code> - <code>NSUserDefaults</code> is a standard data store provided by iOS for saving application specific settings and data. </p>
+<p><code>loadPreviousState</code> loads the previously saved index. This isn’t quite the full implementation of the Memento pattern, but you’re getting there.</p>
+<p>Now, Add the following line to <code>viewDidLoad</code> in <em>ViewController.m</em> before the scroller initialization:</p>
+<pre><code>[self loadPreviousState];
+</code></pre><p>That loads the previously saved state when the app starts. But where do you save the current state of the app for loading from? You’ll use Notifications to do this. iOS sends a <code>UIApplicationDidEnterBackgroundNotification</code> notification when the app enters the background. You can use this notification to call <code>saveCurrentState</code>. Isn’t that convenient?</p>
+<p>Add the following line to the end of <code>viewDidLoad</code>:</p>
+<pre><code>[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(saveCurrentState) name:UIApplicationDidEnterBackgroundNotification object:nil];
+</code></pre><p>Now, when the app is about to enter the background, the <code>ViewController</code> will automatically save the current state by calling <code>saveCurrentState</code>.</p>
+<p>Now, add the following code:</p>
+<pre><code>- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+</code></pre><p>This ensures you remove the class as an observer when the <code>ViewController</code> is deallocated.</p>
+<p>Build and run your app. Navigate to one of the albums, send the app to the background using <em>Command+Shift+H</em> (if you are on the simulator) and then shut down your app. Relaunch, and check that the previously selected album is centered:</p>
+<p><img src="https://koenig-media.raywenderlich.com/uploads/2013/09/2013-09-02_10-51-27-214x320.png" alt="No Change"></p>
+<p>It looks like the album data is correct, but the scroller isn’t centered on the correct album. What gives?</p>
+<p>This is what the optional method <code>initialViewIndexForHorizontalScroller:</code> was meant for! Since that method’s not implemented in the delegate, <code>ViewController</code> in this case, the initial view is always set to the first view.</p>
+<p>To fix that, add the following code to <em>ViewController.m</em>:</p>
+<pre><code>- (NSInteger)initialViewIndexForHorizontalScroller:(HorizontalScroller *)scroller
+{
+    return currentAlbumIndex;
+}
+</code></pre><p>Now the <code>HorizontalScroller</code> first view is set to whatever album is indicated by <code>currentAlbumIndex</code>. This is a great way to make sure the app experience remains personal and resumable.</p>
+<p>Run your app again. Scroll to an album as before, stop the app, then relaunch to make sure the problem is fixed:</p>
+<p><img src="https://koenig-media.raywenderlich.com/uploads/2013/09/2013-09-02_10-56-59-214x320.png" alt="Showing saved state"></p>
+<p>If you look at <code>PersistencyManager</code>‘s <code>init</code>, you’ll notice the album data is hardcoded and recreated every time <code>PersistencyManager</code> is created. But tt’s better to create the list of albums once and store them in a file. How would you save the Album data to a file?</p>
+<p>One option is to iterate through <code>Album</code>‘s properties, save them to a plist file and then recreate the <code>Album</code> instances when they’re needed. This isn’t the best option, as it requires you to write specific code depending on what data/properties are there in each class. For example, if you later created a Movie class with different properties, the saving and loading of that data would require new code. </p>
+<p>Additionally, you won’t be able to save the private variables for each class instance since they are not accessible to an external class. That’s exactly why Apple created the <em>Archiving</em> mechanism.</p>
+<h3 id="Archiving"><a href="#Archiving" class="headerlink" title="Archiving"></a>Archiving</h3><p>One of Apple’s specialized implementations of the Memento pattern is Archiving. This converts an object into a stream that can be saved and later restored without exposing private properties to external classes. You can read more about this functionality in Chapter 16 of the <em>iOS 6 by Tutorials</em> book. Or in <a href="https://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/Archiving/Archiving.html" target="_blank" rel="noopener">Apple’s Archives and Serializations Programming Guide</a>.</p>
+<h3 id="How-to-Use-Archiving"><a href="#How-to-Use-Archiving" class="headerlink" title="How to Use Archiving"></a>How to Use Archiving</h3><p>First, you need to declare that <code>Album</code> can be archived by conforming to the <code>NSCoding</code> protocol. Open <em>Album.h</em> and change the <code>@interface</code> line as follows:</p>
+<pre><code>@interface Album : NSObject 
+</code></pre><p>Add the following two methods to <em>Album.m</em>:</p>
+<pre><code>- (void)encodeWithCoder:(NSCoder *)aCoder
+{
+    [aCoder encodeObject:self.year forKey:@&quot;year&quot;];
+    [aCoder encodeObject:self.title forKey:@&quot;album&quot;];
+    [aCoder encodeObject:self.artist forKey:@&quot;artist&quot;];
+    [aCoder encodeObject:self.coverUrl forKey:@&quot;cover_url&quot;];
+    [aCoder encodeObject:self.genre forKey:@&quot;genre&quot;];
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    self = [super init];
+    if (self)
+    {
+        _year = [aDecoder decodeObjectForKey:@&quot;year&quot;];
+        _title = [aDecoder decodeObjectForKey:@&quot;album&quot;];
+        _artist = [aDecoder decodeObjectForKey:@&quot;artist&quot;];
+        _coverUrl = [aDecoder decodeObjectForKey:@&quot;cover_url&quot;];
+        _genre = [aDecoder decodeObjectForKey:@&quot;genre&quot;];
+    }
+    return self;
+}
+</code></pre><p>You call <code>encodeWithCoder:</code> when you archive an instance of this class. Conversely, you call <code>initWithCoder:</code> when you unarchive an instance to create an instance of <code>Album</code>. It’s simple, yet powerful.</p>
+<p>Now that the <code>Album</code> class can be archived, add the code that actually saves and loads the list of albums. </p>
+<p>Add the following signature (or method prototype) to <em>PersistencyManager.h</em>:</p>
+<pre><code>- (void)saveAlbums;
+</code></pre><p>This will be the method that’s called to save the albums.</p>
+<p>Now, add the method implementation to <em>PersistencyManager.m</em>:</p>
+<pre><code>- (void)saveAlbums
+{
+    NSString *filename = [NSHomeDirectory() stringByAppendingString:@&quot;/Documents/albums.bin&quot;];
+    NSData *data = [NSKeyedArchiver archivedDataWithRootObject:albums];
+    [data writeToFile:filename atomically:YES];
+}
+</code></pre><p><code>NSKeyedArchiver</code> archives the album array into a file called <em>albums.bin</em>. </p>
+<p>When you archive an object which contains other objects, the archiver automatically tries to recursively archive the child objects and any child objects of the children and so on. In this instance, the archival starts with <code>albums</code>, which is an array of Album instances. Since <code>NSArray</code> and <code>Album</code> both support the <em>NSCopying</em> interface, everything in the array is automatically archived. </p>
+<p>Now replace <code>init</code> in <em>PersistencyManager.m</em> with the following code:</p>
+<pre><code>- (id)init
+{
+    self = [super init];
+    if (self) {
+        NSData *data = [NSData dataWithContentsOfFile:[NSHomeDirectory() stringByAppendingString:@&quot;/Documents/albums.bin&quot;]];
+        albums = [NSKeyedUnarchiver unarchiveObjectWithData:data];
+        if (albums == nil)
+        {
+            albums = [NSMutableArray arrayWithArray:
+                     @[[[Album alloc] initWithTitle:@&quot;Best of Bowie&quot; artist:@&quot;David Bowie&quot; coverUrl:@&quot;http://www.coversproject.com/static/thumbs/album/album_david%20bowie_best%20of%20bowie.png&quot; year:@&quot;1992&quot;],
+                     [[Album alloc] initWithTitle:@&quot;It&apos;s My Life&quot; artist:@&quot;No Doubt&quot; coverUrl:@&quot;http://www.coversproject.com/static/thumbs/album/album_no%20doubt_its%20my%20life%20%20bathwater.png&quot; year:@&quot;2003&quot;],
+                     [[Album alloc] initWithTitle:@&quot;Nothing Like The Sun&quot; artist:@&quot;Sting&quot; coverUrl:@&quot;http://www.coversproject.com/static/thumbs/album/album_sting_nothing%20like%20the%20sun.png&quot; year:@&quot;1999&quot;],
+                     [[Album alloc] initWithTitle:@&quot;Staring at the Sun&quot; artist:@&quot;U2&quot; coverUrl:@&quot;http://www.coversproject.com/static/thumbs/album/album_u2_staring%20at%20the%20sun.png&quot; year:@&quot;2000&quot;],
+                     [[Album alloc] initWithTitle:@&quot;American Pie&quot; artist:@&quot;Madonna&quot; coverUrl:@&quot;http://www.coversproject.com/static/thumbs/album/album_madonna_american%20pie.png&quot; year:@&quot;2000&quot;]]];
+            [self saveAlbums];
+        }
+    }
+    return self;
+}
+</code></pre><p>In the new code, <code>NSKeyedUnarchiver</code> loads the album data from the file, if it exists. If it doesn’t exist, it creates the album data and immediately saves it for the next launch of the app. </p>
+<p>You’ll also want to save the album data every time the app goes into the background. This might not seem necessary now but what if you later add the option to change album data? Then you’d want this to ensure that all your changes are saved.</p>
+<p>Add the following method signature to <em>LibraryAPI.h</em>:</p>
+<pre><code>- (void)saveAlbums;
+</code></pre><p>Since the main application accesses all services via <code>LibraryAPI</code>, this is how the application will let <code>PersitencyManager</code> know that it needs to save album data.</p>
+<p>Now add the method implementation to <em>LibraryAPI.m</em>:</p>
+<pre><code>- (void)saveAlbums
+{
+    [persistencyManager saveAlbums];
+}
+</code></pre><p>This code simply passes on a call to <code>LibraryAPI</code> to save the albums on to <code>PersistencyMangaer</code>.</p>
+<p>Add the following code to the end of <code>saveCurrentState</code> in <em>ViewController.m</em>:</p>
+<pre><code>[[LibraryAPI sharedInstance] saveAlbums];
+</code></pre><p>And the above code uses <code>LibraryAPI</code> to trigger the saving of album data whenever the ViewController saves its state.</p>
+<p>Build your app to check that everything compiles. </p>
+<p>Unfortunately, there’s no easy way to check if the data persistency is correct though. You can check the simulator Documents folder for your app in Finder to see that the album data file is created but in order to see any other changes you’d have to add in the ability to change album data.</p>
+<p>But instead of changing data, what if you added an option to delete albums you no longer want in your library? Additionally, wouldn’t it be nice to have an undo option if you delete an album by mistake? </p>
+<p>This provides a great opportunity to talk about the last pattern on the list: <em>Command</em>.</p>
+<h2 id="The-Command-Pattern"><a href="#The-Command-Pattern" class="headerlink" title="The Command Pattern"></a>The Command Pattern</h2><p>The Command design pattern encapsulates a request or action as an object. The encapsulated request is much more flexible than a raw request and can be passed between objects, stored for later, modified dynamically, or placed into a queue. Apple has implemented this pattern using the <em>Target-Action</em> mechanism and <em>Invocation</em>.</p>
+<p>You can read more about <a href="https://developer.apple.com/library/ios/documentation/General/Conceptual/CocoaEncyclopedia/Target-Action/Target-Action.html" target="_blank" rel="noopener">Target-Action</a> in Apple’s documentation but Invocation uses the <em>NSInvocation</em> class which contains a target object, a method selector and some parameters. This object can be changed dynamically and executed when needed. It’s a perfect example of the Command pattern in action. It decouples the sending object from the receiving object or objects and can persist a request or a chain of requests.</p>
+<h2 id="How-to-Use-the-Command-Pattern"><a href="#How-to-Use-the-Command-Pattern" class="headerlink" title="How to Use the Command Pattern"></a>How to Use the Command Pattern</h2><p>Before you get into the invocation of actions, you need to set up the framework for undoing actions. So you must define the <code>UIToolBar</code> and the <code>NSMutableArray</code> needed for the undo stack. </p>
+<p>Add the following code to the class extension in <em>ViewController.m</em> where you defined all the other variables:</p>
+<pre><code>UIToolbar *toolbar;
+// We will use this array as a stack to push and pop operation for the undo option
+NSMutableArray *undoStack;
+</code></pre><p>This creates a toolbar which will display the buttons for the new actions, as well as an array to act as the command queue.</p>
+<p>Add the following code to the beginning of <code>viewDidLoad:</code> (right before comment #2):</p>
+<pre><code>toolbar = [[UIToolbar alloc] init];
+UIBarButtonItem *undoItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemUndo target:self action:@selector(undoAction)];
+undoItem.enabled = NO;
+UIBarButtonItem *space = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+UIBarButtonItem *delete = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemTrash target:self action:@selector(deleteAlbum)];
+[toolbar setItems:@[undoItem,space,delete]];
+[self.view addSubview:toolbar];
+undoStack = [[NSMutableArray alloc] init];
+</code></pre><p>The above code creates a toolbar with two buttons and a flexible space between them. It also creates an empty undo stack. The undo button is disabled here because the undo stack starts off empty. </p>
+<p>Also, note that the toolbar isn’t initiated with a frame, as the frame size set in <code>viewDidLoad</code> isn’t final. So set the final frame via the following block of code once the view frame is finalized by adding the code to <em>ViewController.m</em>:</p>
+<pre><code>- (void)viewWillLayoutSubviews
+{
+    toolbar.frame = CGRectMake(0, self.view.frame.size.height-44, self.view.frame.size.width, 44);
+    dataTable.frame = CGRectMake(0, 130, self.view.frame.size.width, self.view.frame.size.height - 200);
+}
+</code></pre><p>You’ll add three method to <em>ViewController.m</em> for handling album management actions: add, delete, and undo. </p>
+<p>The first is the method for adding a new album:</p>
+<pre><code>- (void)addAlbum:(Album*)album atIndex:(int)index
+{
+    [[LibraryAPI sharedInstance] addAlbum:album atIndex:index];
+    currentAlbumIndex = index;
+    [self reloadScroller];
+}
+</code></pre><p>Here you add the album, set it as the current album index, and reload the scroller.</p>
+<p>Next comes the delete method:</p>
+<pre><code>- (void)deleteAlbum
+{
+    // 1
+    Album *deletedAlbum = allAlbums[currentAlbumIndex];
+
+    // 2
+    NSMethodSignature *sig = [self methodSignatureForSelector:@selector(addAlbum:atIndex:)];
+    NSInvocation *undoAction = [NSInvocation invocationWithMethodSignature:sig];
+    [undoAction setTarget:self];
+    [undoAction setSelector:@selector(addAlbum:atIndex:)];
+    [undoAction setArgument:&amp;deletedAlbum atIndex:2];
+    [undoAction setArgument:¤tAlbumIndex atIndex:3];
+    [undoAction retainArguments];
+
+    // 3
+    [undoStack addObject:undoAction];
+
+    // 4
+    [[LibraryAPI sharedInstance] deleteAlbumAtIndex:currentAlbumIndex];
+    [self reloadScroller];
+
+    // 5
+    [toolbar.items[0] setEnabled:YES];
+}
+</code></pre><p>There are some new and exciting features in this code, so consider each commented section below:</p>
+<ol>
+<li>Get the album to delete.</li>
+<li>Define an object of type <code>NSMethodSignature</code> to create the <code>NSInvocation</code>, which will be used to reverse the delete action if the user later decides to undo a deletion. The <code>NSInvocation</code> needs to know three things: The selector (what message to send), the target (who to send the message to) and the arguments of the message. In this example the message sent is delete’s opposite since when you undo a deletion, you need to add back the deleted album.</li>
+<li>After the <code>undoAction</code> has been created you add it to the <code>undoStack</code>. This action will be added to the end of the array, just as in a normal stack.</li>
+<li>Use <code>LibraryAPI</code> to delete the album from the data structure and reload the scroller.</li>
+<li>Since there’s an action in the undo stack, you need to enable the undo button.</li>
+</ol>
+<p><em>Note:</em> With <code>NSInvocation</code>, you need to keep the following points in mind: </p>
+<ul>
+<li>The arguments must be passed by pointer.</li>
+<li>The arguments start at index 2; indices 0 and 1 are reserved for the target and the selector.</li>
+<li>If there’s a chance that the arguments will be deallocated, then you should call <code>retainArguments</code>.</li>
+</ul>
+<p>Finally, add the method for the undo action:</p>
+<pre><code>- (void)undoAction
+{
+    if (undoStack.count &gt; 0)
+    {
+        NSInvocation *undoAction = [undoStack lastObject];
+        [undoStack removeLastObject];
+        [undoAction invoke];
+    }
+
+    if (undoStack.count == 0)
+    {
+        [toolbar.items[0] setEnabled:NO];
+    }
+}
+</code></pre><p>The undo operation “pops” the last object in the stack. This object is always of type NSInvocation and can be invoked by calling … <code>invoke</code>. This invokes the command you created earlier when the album was deleted, and adds the deleted album back to the album list. Since you also deleted the last object in the stack when you “popped” it, you now check to see if the stack is empty. If it is, that means there are no more actions to undo. So you disable the Undo button.</p>
+<p>Build and run your app to test out your undo mechanism, delete an album (or two) and hit the Undo button to see it in action:</p>
+<p><img src="https://koenig-media.raywenderlich.com/uploads/2013/08/design-pattern-stage4-180x320.png" alt="design pattern - stage4"></p>
+<p>This is also a good place to test out whether changes to your album data is retained between sessions. Now, if you delete an album, send the app to the background, and then terminate the app, the next time you start the app the displayed album list should reflect the deletion.</p>
+<h2 id="Where-to-go-from-here"><a href="#Where-to-go-from-here" class="headerlink" title="Where to go from here?"></a>Where to go from here?</h2><p>Here’s the source code for the finished project: <a href="https://koenig-media.raywenderlich.com/uploads/2013/08/BlueLibrary-final.zip" target="_blank" rel="noopener">BlueLibrary-final</a></p>
+<p>There are two other design patterns that didn’t make their way into the app, but are important to mention: <a href="http://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/CocoaFundamentals/CocoaDesignPatterns/CocoaDesignPatterns.html#//apple_ref/doc/uid/TP40002974-CH6-SW32" target="_blank" rel="noopener">Abstract Factory (aka Class Cluster)</a> and <a href="http://developer.apple.com/library/ios/documentation/Cocoa/Conceptual/CocoaFundamentals/CocoaDesignPatterns/CocoaDesignPatterns.html#//apple_ref/doc/uid/TP40002974-CH6-SW25" target="_blank" rel="noopener">Chain of Responsibility (aka Responder Chain)</a>. Feel free to read up on these to expand your design pattern horizons.</p>
+<p>In this tutorial you saw how to harness the power of iOS design patterns to perform complicated tasks in a very straightforward and loosely coupled manner. You’ve learned a lot of iOS design patterns and concepts: Singleton, MVC, Delegation, Protocols, Facade, Observer, Memento, and Command.</p>
+<p>Your final code is loosely coupled, reusable, and readable. If another developer looks at your code, they’ll instantly understand what’s going on and what each class does in your app.</p>
+<p>The point isn’t to use a design pattern for every line of code you write. Instead, be aware of design patterns when you consider how to solve a particular problem, especially in the early stages of designing your app. They’ll make your life as a developer much easier and your code a lot better!</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Design-Patterns/" rel="tag"># Design Patterns</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/01/06/learn programming/How to Remember the Code You're Learning/" rel="next" title="How to Remember the Code You're Learning">
+                <i class="fa fa-chevron-left"></i> How to Remember the Code You're Learning
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/01/23/algorithm/2. A note on Big-O notation/" rel="prev" title="2. A note on Big-O notation">
+                2. A note on Big-O notation <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="Xin Jie" />
+          <p class="site-author-name" itemprop="name">Xin Jie</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives/">
+                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#iOS-Design-Patterns"><span class="nav-number">1.</span> <span class="nav-text">iOS Design Patterns</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Getting-Started"><span class="nav-number">1.1.</span> <span class="nav-text">Getting Started</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MVC-–-The-King-of-Design-Patterns"><span class="nav-number">1.2.</span> <span class="nav-text">MVC – The King of Design Patterns</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#How-to-Use-the-MVC-Pattern"><span class="nav-number">1.3.</span> <span class="nav-text">How to Use the MVC Pattern</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#The-Singleton-Pattern"><span class="nav-number">1.4.</span> <span class="nav-text">The Singleton Pattern</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#How-to-Use-the-Singleton-Pattern"><span class="nav-number">1.5.</span> <span class="nav-text">How to Use the Singleton Pattern</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#The-Facade-Design-Pattern"><span class="nav-number">1.6.</span> <span class="nav-text">The Facade Design Pattern</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#How-to-Use-the-Facade-Pattern"><span class="nav-number">1.7.</span> <span class="nav-text">How to Use the Facade Pattern</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#The-Decorator-Design-Pattern"><span class="nav-number">1.8.</span> <span class="nav-text">The Decorator Design Pattern</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Category"><span class="nav-number">1.8.1.</span> <span class="nav-text">Category</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#How-to-Use-Categories"><span class="nav-number">1.8.2.</span> <span class="nav-text">How to Use Categories</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Delegation"><span class="nav-number">1.8.3.</span> <span class="nav-text">Delegation</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#How-to-Use-the-Delegate-Pattern"><span class="nav-number">1.8.4.</span> <span class="nav-text">How to Use the Delegate Pattern</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#The-Adapter-Pattern"><span class="nav-number">1.9.</span> <span class="nav-text">The Adapter Pattern</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#How-to-Use-the-Adapter-Pattern"><span class="nav-number">1.10.</span> <span class="nav-text">How to Use the Adapter Pattern</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#The-Observer-Pattern"><span class="nav-number">1.11.</span> <span class="nav-text">The Observer Pattern</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Notifications"><span class="nav-number">1.11.1.</span> <span class="nav-text">Notifications</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#How-to-Use-Notifications"><span class="nav-number">1.11.2.</span> <span class="nav-text">How to Use Notifications</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Key-Value-Observing-KVO"><span class="nav-number">1.11.3.</span> <span class="nav-text">Key-Value Observing (KVO)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#How-to-Use-the-KVO-Pattern"><span class="nav-number">1.11.4.</span> <span class="nav-text">How to Use the KVO Pattern</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#The-Memento-Pattern"><span class="nav-number">1.12.</span> <span class="nav-text">The Memento Pattern</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#How-to-Use-the-Memento-Pattern"><span class="nav-number">1.13.</span> <span class="nav-text">How to Use the Memento Pattern</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Archiving"><span class="nav-number">1.13.1.</span> <span class="nav-text">Archiving</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#How-to-Use-Archiving"><span class="nav-number">1.13.2.</span> <span class="nav-text">How to Use Archiving</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#The-Command-Pattern"><span class="nav-number">1.14.</span> <span class="nav-text">The Command Pattern</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#How-to-Use-the-Command-Pattern"><span class="nav-number">1.15.</span> <span class="nav-text">How to Use the Command Pattern</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Where-to-go-from-here"><span class="nav-number">1.16.</span> <span class="nav-text">Where to go from here?</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Xin Jie</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
